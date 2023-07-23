@@ -11,4 +11,5 @@ class Jump {
 export const jumps: Jump[] = [
     new Jump("works", "My Works"), 
     new Jump("about", "About Me"), 
+    new Jump("contacts", "Contacts"), 
 ]

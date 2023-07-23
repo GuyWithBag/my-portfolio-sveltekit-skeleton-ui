@@ -1,9 +1,23 @@
 <script lang="ts">
+	import { currentPortfolioIndex, previousPortfolioIndex } from "$lib/controllers/portfolioController";
+
 
 	import type ImageSource from "$lib/models/ImageSource.ts"; 
+	import { fly } from "svelte/transition";
 
-    let elemCarousel: HTMLDivElement;
     export let imageSources: ImageSource[] = []; 
+
+	const clamp = (num: number, min: number, max: number) => Math.min(Math.max(num, min), max);
+
+    let elemCarousel: HTMLDivElement; 
+	let currentIndex: number; 
+
+	$: comparePorfolioIndex = currentIndex - previousPortfolioIndex; 
+	$: flyDirection = clamp(comparePorfolioIndex, -1, 1); 
+
+	currentPortfolioIndex.subscribe((value: number) => {
+		currentIndex = value; 
+	})
 
     function carouselLeft(): void {
         const x =
@@ -20,18 +34,21 @@
         elemCarousel.scroll(x, 0);
     }
 
-</script>
+</script> 
 
-<div class="card p-4 grid grid-cols-[auto_1fr_auto] gap-4 items-center">
+<div 
+	in:fly={{y: -200 * flyDirection}}
+	class="card p-4 grid grid-cols-[auto_1fr_auto] items-center w-[25rem] object-contain"
+>
 	<!-- Button: Left -->
 	<button type="button" class="btn-icon variant-filled" on:click={carouselLeft}>
 		<i class="fa-solid fa-arrow-left" />
 	</button>
-	<!-- Full Images -->
+	<!-- Full Images --> 
 	<div bind:this={elemCarousel} class="snap-x snap-mandatory scroll-smooth flex overflow-x-auto">
 		{#each imageSources as imageSource}
 			<img
-				class="snap-center w-[17rem] rounded-container-token object-contain"
+				class="snap-center w-auto rounded-container-token object-contain p-1"
 				src={imageSource.src}
 				alt={imageSource.alt}
 				loading="lazy"

@@ -1,7 +1,7 @@
 import { writable } from 'svelte/store';
 
 function createStore() {
-    const { subscribe, set } = writable<boolean>(true);
+    const { subscribe, set } = writable<boolean>(false);
 
     return {
         subscribe, 

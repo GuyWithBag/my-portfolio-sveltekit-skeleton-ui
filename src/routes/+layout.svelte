@@ -8,54 +8,44 @@
 	import { AppShell, AppBar } from '@skeletonlabs/skeleton';
 	import { headerVisible } from '$lib/controllers/headerController.ts'; 
 	import { fly } from 'svelte/transition'; 
+	import { jumps } from '$lib/models/jumps';
+	import JumpButton from '$lib/components/JumpButton.svelte';
+	import { appShellController } from '$lib/controllers/export';
 
 	let visible: Boolean; 
 	headerVisible.subscribe((value: boolean) => {
 		visible = value; 
 	})
 
+	function handleScroll(e: any) {
+		appShellController.set(e.scollY)
+	}
+
 </script> 
 
 <!-- App Shell -->
-<AppShell>
-	<svelte:fragment slot="header">
-		{#if visible}
-		<!-- App Bar -->
-			<div transition:fly={{ y: -70, duration: 300 }}>
-				<AppBar>
-					<svelte:fragment slot="lead">
-						<strong class="text-xl uppercase">Skeleton</strong>
-					</svelte:fragment>
-					<svelte:fragment slot="trail">
-						<a
-							class="btn btn-sm variant-filled-primary"
-							href="https://discord.gg/EXqV7W8MtY"
-							target="_blank"
-							rel="noreferrer"
-						>
-							Discord
-						</a>
-						<a
-							class="btn btn-sm variant-ghost-surface"
-							href="https://twitter.com/SkeletonUI"
-							target="_blank"
-							rel="noreferrer"
-						>
-							Twitter
-						</a>
-						<a
-							class="btn btn-sm variant-ghost-surface"
-							href="https://github.com/skeletonlabs/skeleton"
-							target="_blank"
-							rel="noreferrer"
-						>
-							GitHub
-						</a>
-					</svelte:fragment>
-				</AppBar>
-			</div>
-		{/if}
-	</svelte:fragment>
-	<!-- Page Route Content -->
-	<slot />
-</AppShell>
+<body>
+	<div style="display: contents" class="h-full overflow-hidden">
+		<AppShell on:scroll={handleScroll}>
+			<svelte:fragment slot="header">
+				{#if visible}
+				<!-- App Bar -->
+					<div transition:fly={{ y: -70, duration: 300 }}>
+						<AppBar>
+							<svelte:fragment slot="lead">
+								<strong class="text-xl uppercase">Loejee Miguel L. Dulaugon's Portfolio</strong>
+							</svelte:fragment>
+							<svelte:fragment slot="trail">
+								{#each jumps as jump}
+									<JumpButton jumpTo={jump.id} style="btn variant-ghost">{jump.name}</JumpButton>
+								{/each}
+							</svelte:fragment>
+						</AppBar>
+					</div>
+				{/if}
+			</svelte:fragment>
+			<!-- Page Route Content -->
+			<slot />
+		</AppShell>
+	</div>
+</body>

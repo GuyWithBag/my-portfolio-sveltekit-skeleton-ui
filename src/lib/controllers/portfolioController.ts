@@ -1,20 +1,41 @@
 import { writable } from 'svelte/store';
 
 
-enum PortfolioItems {
+export enum PortfolioItems {
     MUSIC_PLAYER, 
     MORSE_CODE_TORCH, 
     CHAIN_REACTION_ATOM, 
 }
 
+export let previousPortfolioIndex: number; 
+
 function createStore () {
-    const { subscribe, set } = writable<PortfolioItems>(PortfolioItems.MUSIC_PLAYER); 
+    const { subscribe, set, update } = writable(0); 
+
+    let itemsLength: number = Object.keys(PortfolioItems).length / 2; 
 
     return {
         subscribe, 
-        set: (item: PortfolioItems) => set(item), 
+        next: () => update(
+                (n) => {
+                    previousPortfolioIndex = n; 
+                    if ((n + 1) >= itemsLength) {
+                        return 0; 
+                    }
+                    return n + 1; 
+                }
+            ), 
+        back: () => update(
+            (n) => {
+                previousPortfolioIndex = n; 
+                if ((n - 1) < 0) {
+                    return itemsLength - 1; 
+                }
+                return n - 1; 
+            }
+            ), 
+        set: (index: number) => set(index), 
     };
-
 }
 
-export const currentPortfolioItem = createStore(); 
+export const currentPortfolioIndex = createStore(); 

@@ -19,6 +19,7 @@
 		"@tsconfig/svelte": "^5.0.0",
 		"@typescript-eslint/eslint-plugin": "^5.45.0",
 		"@typescript-eslint/parser": "^5.45.0",
+		"@vitejs/plugin-react": "^1.0.8",
 		"autoprefixer": "^10.4.14",
 		"eslint": "^8.28.0",
 		"eslint-config-prettier": "^8.5.0",
@@ -35,6 +36,7 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"svelte-scrolling": "^1.2.2"
+		"svelte-scroll": "^0.0.0",
+		"svelte-scrolling-plus": "^1.2.3"
 	}
 }
