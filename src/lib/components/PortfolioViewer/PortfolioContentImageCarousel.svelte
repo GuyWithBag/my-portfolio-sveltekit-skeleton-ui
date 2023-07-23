@@ -1,5 +1,7 @@
 <script lang="ts">
 	import { currentPortfolioIndex, previousPortfolioIndex } from "$lib/controllers/portfolioController";
+	import ArrowLeft from 'svelte-material-icons/ArrowLeft.svelte'; 
+	import ArrowRight from 'svelte-material-icons/ArrowRight.svelte'; 
 
 
 	import type ImageSource from "$lib/models/ImageSource.ts"; 
@@ -42,7 +44,7 @@
 >
 	<!-- Button: Left -->
 	<button type="button" class="btn-icon variant-filled" on:click={carouselLeft}>
-		<i class="fa-solid fa-arrow-left" />
+		<ArrowLeft />
 	</button>
 	<!-- Full Images --> 
 	<div bind:this={elemCarousel} class="snap-x snap-mandatory scroll-smooth flex overflow-x-auto">
@@ -57,6 +59,6 @@
 	</div>
 	<!-- Button: Right -->
 	<button type="button" class="btn-icon variant-filled" on:click={carouselRight}>
-		<i class="fa-solid fa-arrow-right" />
+		<ArrowRight />
 	</button>
 </div>

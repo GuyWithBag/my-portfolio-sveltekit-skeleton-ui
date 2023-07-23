@@ -38,7 +38,7 @@
             document.querySelector("#about"), 
             {
                 isIntersecting: () => visible = true, 
-                isNotIntersection: () => visible = false, 
+                isNotIntersecting: () => visible = false, 
                 threshold: 0.7
             }
         )

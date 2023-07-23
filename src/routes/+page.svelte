@@ -11,6 +11,9 @@
 	import GooglePlayButton from "$lib/components/CustomButtons/GooglePlayButton.svelte";
 	import AboutParagraphBlock from "$lib/components/AboutParagraphBlock.svelte";
 	import About from "$lib/components/About/About.svelte";
+	import { fade } from "svelte/transition";
+	import { quintOut } from "svelte/easing";
+	import Contacts from "$lib/components/Contacts/Contacts.svelte";
 	
 	let curPortfolioIndex: number; 
 	let scrollY: number; 
@@ -23,17 +26,36 @@
 		curPortfolioIndex = value; 
 	})
 	
-	// ToDO: Whenever the element is overvable, play an animation
-	onMount(() => {
+	import { spring } from 'svelte/motion';
 
-	}); 
+	let coords = spring({ x: 50, y: 50 }, {
+		stiffness: 0.1,
+		damping: 0.25
+	});
+
+	let size = spring(10);
 
 </script>
 
-<div class="h-screen overflow-scroll" on:scroll={scrollBind}>
+<circle 
+	cx={$coords.x}
+	cy={$coords.y}
+	class="circle-glow fixed z-[10] rounded-full" style="" 
+/>
+
+<div class="vignette fixed w-screen h-screen z-20"></div>
+
+<div 
+	on:mousemove={(e) => {
+		coords.set({ x: e.clientX, y: e.clientY });
+	}}
+	on:mousedown={() => size.set(30)}
+	on:mouseup={() => size.set(10)}
+	class="h-screen overflow-scroll" on:scroll={scrollBind}
+>
 	<TitleCard scrollY={scrollY}/>
 	<div class="relative z-10">
-		<div  class="h-auto py-24 px-20 bg-surface-500 flex items-center justify-center rounded-3xl">
+		<div  class="h-auto py-24 px-20 bg-surface-500 flex items-center justify-center rounded-3xl" id="works-container">
 			<div class="px-[10rem]">
 				<PortfolioViewer>
 					{#if curPortfolioIndex == PortfolioItems.MUSIC_PLAYER}
@@ -104,32 +126,21 @@
 			</div>
 		</div>
 		<About/>
-		<div id="contacts" class="flex h-screen items-center justify-center bg-slate-950">
-			<div class="flex flex-col card variant-filled w-[60rem] p-10 gap-10">
-				<h1 class="h1 uppercase"><strong>Let's Connect!</strong></h1>
-				<div class="grid grid-flow-row gap-2" style='grid-template-columns: repeat(5, 1fr); grid-auto-rows: 1fr;'>
-					<div class="btn variant-ghost font-bold" style="grid-area: 1 / 1 / 1 / 5;">I AM ALWAYS AVAILABLE AS: </div>
-					<div class="btn variant-ghost" style="grid-area: 1 / 5 / 1 / -1;"></div>
-					<div class="btn variant-ghost" style="grid-area: 2 / 1 / 2 / 3;">SOFTWARE ENGINEER</div>
-					<div class="btn variant-ghost" style="grid-area: 2 / 3 / 2 / -1;"></div>
-					<div class="btn variant-ghost" style="grid-area: 3 / 1 / 3 / 2;"></div>
-					<div class="btn variant-ghost" style="grid-area: 3 / 2 / 3 / -1;">GAME DEVELOPER</div>
-					<div class="btn variant-ghost" style="grid-area: 4 / 1 / 4 / 4;">FRONT-END ENGINEER</div>
-					<div class="btn variant-ghost" style="grid-area: 4 / 4 / 4 / -1;"></div>
-					<div class="btn variant-ghost" style="grid-area: 5 / 1 / 5 / 3;"></div>
-					<div class="btn variant-ghost" style="grid-area: 5 / 3 / 5 / -1;">WEB DEVELOPER</div>
-
-				</div>
-				<hr />
-				<div class="grid grid-cols-4">
-					<a href="" class="btn text-2xl">GitHub</a>
-					<a href="" class="btn text-2xl">Email</a>
-					<a href="" class="btn text-2xl">Playstore</a>
-					<a href="" class="btn text-2xl">LinkedIn</a>
-					<a href="" class="btn text-2xl">UpWork</a>
-				</div>
-			</div>
-		</div>
+		<Contacts />
 	</div>
 </div> 
 
+<style>
+	.circle-glow {
+		height: 70rem; 
+		width: 70rem;
+		background: radial-gradient(circle at 50% 50%, rgba(44, 61, 169, 0.43) 0%, rgba(255, 255, 255, 0) 100%); 
+		transform:translate(-50%,-50%);
+	}
+
+	.vignette {
+		pointer-events: none; 
+		background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0) 59%, rgba(0, 0, 0, 0.05) 75%, rgba(0, 0, 0, 0.1) 86%, rgba(0, 0, 0, 0.45) 100%);
+	}
+
+</style>

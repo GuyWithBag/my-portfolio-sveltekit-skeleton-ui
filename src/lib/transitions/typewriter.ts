@@ -7,7 +7,7 @@ export function typewriter(node: HTMLElement, { speed = 0, delay = 0, duration =
     //     throw new Error(`This transition only works on elements with a single text node child`);
     // }
 
-    const text: string | null = node.innerHTML;
+    const text: string | null = node.innerText;
     let newDuration = duration; 
     if (speed > 0) {
         newDuration = text!.length / (speed * 0.01); 
@@ -18,7 +18,7 @@ export function typewriter(node: HTMLElement, { speed = 0, delay = 0, duration =
         delay: delay, 
         tick: (time: number) => {
             const i = Math.trunc(text!.length * time);
-            node.innerHTML = text!.slice(0, i);
+            node.innerText = text!.slice(0, i);
         }
     };
 }

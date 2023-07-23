@@ -1,7 +1,11 @@
 <script lang="ts">
-	import { currentPortfolioIndex, PortfolioItems } from "$lib/controllers/portfolioController";
+	import { currentPortfolioIndex } from "$lib/controllers/portfolioController";
+	import { onObserve } from "$lib/domain/elements";
+	import { onMount } from "svelte";
 
-    let self: HTMLDivElement; 
+
+    // let self: HTMLDivElement; 
+    let visible: boolean = false; 
 
     function onWheel(event: WheelEvent) {
         // document.getElementById("works")!.scrollIntoView({behavior: "smooth"}); 
@@ -28,9 +32,23 @@
     //     }
     //     return true; 
     // }
+
+    onMount(() => {
+        onObserve(
+            document.querySelector("#works-container"), 
+            {
+                isIntersecting: () => visible = true,
+                isNotIntersecting: () => visible = false, 
+                threshold: 0, 
+            }
+        )
+    })
+
 </script>
 
-<div bind:this={self} on:wheel={onWheel} class="" id="works">
-    <slot />
-</div>
+{#if visible}
+    <div on:wheel={onWheel} class="" id="works">
+        <slot />
+    </div>
+{/if}
 

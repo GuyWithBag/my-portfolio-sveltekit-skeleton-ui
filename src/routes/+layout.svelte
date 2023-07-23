@@ -11,6 +11,7 @@
 	import { jumps } from '$lib/models/jumps';
 	import JumpButton from '$lib/components/JumpButton.svelte';
 	import { appShellController } from '$lib/controllers/export';
+	import ArrowUp from 'svelte-material-icons/ArrowUp.svelte'; 
 
 	let visible: Boolean; 
 	headerVisible.subscribe((value: boolean) => {
@@ -24,7 +25,7 @@
 </script> 
 
 <!-- App Shell -->
-<body>
+<body style="overflow-x-hidden">
 	<div style="display: contents" class="h-full overflow-hidden">
 		<AppShell on:scroll={handleScroll}>
 			<svelte:fragment slot="header">
@@ -36,6 +37,7 @@
 								<strong class="text-xl uppercase">Loejee Miguel L. Dulaugon's Portfolio</strong>
 							</svelte:fragment>
 							<svelte:fragment slot="trail">
+								<JumpButton jumpTo="title-card" style="btn-icon variant-ghost"><ArrowUp /></JumpButton>
 								{#each jumps as jump}
 									<JumpButton jumpTo={jump.id} style="btn variant-ghost">{jump.name}</JumpButton>
 								{/each}
