@@ -48,7 +48,7 @@
             <div class="vignette h-screen w-screen fixed z-[2]"></div>
             <div 
                 transition:fade={{duration: spaceBgFade, easing: quadIn}}
-                class=" bg-[url({SpaceBackground})] h-full w-full flex items-center justify-center relative z-[0]"
+                class=" bg-[{SpaceBackground}] h-full w-full flex items-center justify-center relative z-[0]"
             >
                 <div class="relative z-[3]" style:transform={`translate3d(0, ${scrollY * parallaxSpeed}px, 0)`}>
                     <div class="h-screen flex items-center justify-center">
