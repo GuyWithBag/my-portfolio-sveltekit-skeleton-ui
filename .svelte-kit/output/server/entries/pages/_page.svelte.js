@@ -142,7 +142,7 @@ const LogoButton = create_ssr_component(($$result, $$props, $$bindings, slots) =
   let { logo } = $$props;
   let { alt } = $$props;
   let { label } = $$props;
-  let { href = "" } = $$props;
+  let { href = "https://github.com/GuyWithBag" } = $$props;
   if ($$props.logo === void 0 && $$bindings.logo && logo !== void 0)
     $$bindings.logo(logo);
   if ($$props.alt === void 0 && $$bindings.alt && alt !== void 0)
@@ -435,7 +435,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   spring(10);
   $$result.css.add(css);
   $$unsubscribe_coords();
-  return `<circle${add_attribute("cx", $coords.x, 0)}${add_attribute("cy", $coords.y, 0)} class="circle-glow fixed z-[10] rounded-full svelte-arunz" style=""></circle>
+  return `<circle${add_attribute("cx", $coords.x, 0)}${add_attribute("cy", $coords.y, 0)} class="circle-glow fixed z-[10] rounded-full svelte-arunz"></circle>
 
 <div class="vignette fixed w-screen h-screen z-20 svelte-arunz"></div>
 
@@ -447,7 +447,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
           return `<div slot="images">${validate_component(PortfolioContentImageCarousel, "PortfolioContentImages").$$render($$result, { imageSources: chainReactionImages }, {}, {})}</div>`;
         },
         actions: () => {
-          return `<div slot="actions">${validate_component(GooglePlayButton, "GooglePlayButton").$$render($$result, { href: "" }, {}, {})}</div>`;
+          return `<div slot="actions">${validate_component(GooglePlayButton, "GooglePlayButton").$$render($$result, { href: "https://github.com/GuyWithBag" }, {}, {})}</div>`;
         },
         bio: () => {
           return `<div slot="bio">${validate_component(PortfolioContentBio, "PortfolioContentBio").$$render(
@@ -476,7 +476,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
           return `<div slot="images">${validate_component(PortfolioContentImageCarousel, "PortfolioContentImages").$$render($$result, { imageSources: morseCodeTorchImages }, {}, {})}</div>`;
         },
         actions: () => {
-          return `<div slot="actions">${validate_component(GooglePlayButton, "GooglePlayButton").$$render($$result, { href: "" }, {}, {})}</div>`;
+          return `<div slot="actions">${validate_component(GooglePlayButton, "GooglePlayButton").$$render($$result, { href: "https://github.com/GuyWithBag" }, {}, {})}</div>`;
         },
         bio: () => {
           return `<div slot="bio">${validate_component(PortfolioContentBio, "PortfolioContentBio").$$render(
@@ -505,7 +505,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
           return `<div slot="images">${validate_component(PortfolioContentImageCarousel, "PortfolioContentImages").$$render($$result, { imageSources: chainReactionImages }, {}, {})}</div>`;
         },
         actions: () => {
-          return `<div slot="actions">${validate_component(GooglePlayButton, "GooglePlayButton").$$render($$result, { href: "" }, {}, {})}</div>`;
+          return `<div slot="actions">${validate_component(GooglePlayButton, "GooglePlayButton").$$render($$result, { href: "https://github.com/GuyWithBag" }, {}, {})}</div>`;
         },
         bio: () => {
           return `<div slot="bio">${validate_component(PortfolioContentBio, "PortfolioContentBio").$$render(
