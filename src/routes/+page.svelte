@@ -36,7 +36,7 @@
 <circle 
 	cx={$coords.x}
 	cy={$coords.y}
-	class="circle-glow fixed z-[10] rounded-full" style="" 
+	class="circle-glow fixed z-[10] rounded-full"
 />
 
 <div class="vignette fixed w-screen h-screen z-20"></div>
@@ -69,7 +69,7 @@
 								</PortfolioContentBio>
 							</div>
 							<div slot="actions">
-								<GooglePlayButton href=""/>
+								<GooglePlayButton href="https://github.com/GuyWithBag"/>
 							</div>
 							<div slot="images">
 								<PortfolioContentImages imageSources={chainReactionImages}/>
@@ -91,7 +91,7 @@
 								</PortfolioContentBio>
 							</div>
 							<div slot="actions">
-								<GooglePlayButton href=""/>
+								<GooglePlayButton href="https://github.com/GuyWithBag"/>
 							</div>
 							<div slot="images">
 								<PortfolioContentImages imageSources={morseCodeTorchImages}/>
@@ -111,7 +111,7 @@
 								</PortfolioContentBio>
 							</div>
 							<div slot="actions">
-								<GooglePlayButton href=""/>
+								<GooglePlayButton href="https://github.com/GuyWithBag"/>
 							</div>
 							<div slot="images">
 								<PortfolioContentImages imageSources={chainReactionImages}/>

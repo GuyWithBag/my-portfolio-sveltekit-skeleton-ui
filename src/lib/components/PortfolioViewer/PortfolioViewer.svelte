@@ -47,7 +47,7 @@
 </script>
 
 {#if visible}
-    <div on:wheel={onWheel} class="" id="works">
+    <div on:wheel={onWheel} id="works">
         <slot />
     </div>
 {/if}

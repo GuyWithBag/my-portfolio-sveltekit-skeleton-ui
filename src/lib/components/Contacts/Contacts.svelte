@@ -44,9 +44,9 @@
             <div class="grid grid-cols-4">
                 <a href="https://github.com/GuyWithBag" class="btn text-2xl">GitHub</a>
                 <a href="loejeemigueldulaugon@gmail.com" class="btn text-2xl">Email</a>
-                <a href="" class="btn text-2xl">Playstore</a>
+                <!-- <a href="" class="btn text-2xl">Playstore</a> -->
                 <a href="https://www.linkedin.com/in/loejee-miguel-dulaugon-805480284/" class="btn text-2xl">LinkedIn</a>
-                <a href="" class="btn text-2xl">UpWork</a>
+                <!-- <a href="" class="btn text-2xl">UpWork</a> -->
             </div>
         </div>
     {/if}

@@ -4,6 +4,9 @@
     export let jumpTo: string; 
 
     function onClick() {
+        if (jumpTo == null) {
+            return; 
+        }
         document.getElementById(jumpTo)!.scrollIntoView({
             behavior: 'smooth',
         });

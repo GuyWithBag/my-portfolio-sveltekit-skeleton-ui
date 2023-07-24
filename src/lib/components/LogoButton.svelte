@@ -2,7 +2,7 @@
     export let logo: string | undefined; 
     export let alt: string | undefined; 
     export let label: string | undefined; 
-    export let href: string = ""; 
+    export let href: string = "https://github.com/GuyWithBag"; 
 </script>
 
 <a href={href} class="btn variant-filled h-6">
