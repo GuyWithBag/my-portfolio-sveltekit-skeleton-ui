@@ -52,7 +52,7 @@
         class="flex bg-[url(src/lib/assets/images/background/blue_feel.png)] h-screen items-center justify-center relative z-[1]"
     >
         {#if visible}
-            <div class="grid lg:grid-cols-2 w-[60rem] items-center">
+            <div class="grid lg:grid-cols-2 w-[60rem] justify-center items-center">
                 <div transition:spin={{duration: 1000, easing: cubicInOut, times: 8}}>
                     <img 
                         src="src/lib/assets/gifs/lulu.gif"

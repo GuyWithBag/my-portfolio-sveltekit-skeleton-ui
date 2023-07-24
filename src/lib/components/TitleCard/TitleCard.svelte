@@ -43,7 +43,7 @@
 
 <div id="title-card"  class="h-screen flex items-center justify-center relative z-[0]">
     {#if titleCardVisiblity == true}
-        <div class="vignette h-screen w-screen fixed z-[2]">
+            <div class="vignette h-screen w-screen fixed z-[2]"></div>
             <div 
                 transition:fade={{duration: 5000, easing: quadIn}}
                 class=" bg-[url(src/lib/assets/images/background/kai-pilger-space.jpg)] h-full w-full flex items-center justify-center relative z-[0]"
@@ -86,13 +86,12 @@
                     </div>
                 </div>
             </div>
-        </div>
     {/if}
 </div>
 
 <style>
     .vignette {
-        pointer-events: none;
+        pointer-events: none; 
         background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0) 15%, rgba(0, 0, 0, 0.05) 35%, rgba(0, 0, 0, 0.1) 65%, rgba(0, 0, 0, 0.45) 100%);
     }
 </style>

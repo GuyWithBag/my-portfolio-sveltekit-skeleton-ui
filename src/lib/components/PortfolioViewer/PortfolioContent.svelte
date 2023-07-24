@@ -6,11 +6,11 @@
     export let imagesAtRight: boolean = true; 
 </script>
 
-<div class="flex flex-col justify-center content-center">
+<div class="flex flex-col min-h-[34rem] justify-center content-center">
     <button on:click={currentPortfolioIndex.back} class="btn">
         <ArrowUp size="2rem"/>
     </button>
-    <div class="lg:max-h-[33rem] overflow-hidden">
+    <div class="lg:max-h-[34rem] overflow-hidden">
         <div class="grid lg:grid-cols-2 gap-3 justify-items-center overflow-hidden">
             {#if imagesAtRight == false}
                 <slot name="images" /> 
