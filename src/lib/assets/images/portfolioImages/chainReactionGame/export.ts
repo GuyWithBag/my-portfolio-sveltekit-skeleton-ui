@@ -1,11 +1,11 @@
 import ImageSource from "$lib/models/ImageSource"; 
-import MainMenu from 'src/lib/assets/images/portfolioImages/chainReactionGame/main_menu.png';
-import GamePlay from 'src/lib/assets/images/portfolioImages/chainReactionGame/gameplay.png'; 
-import MapsMenu from 'src/lib/assets/images/portfolioImages/chainReactionGame/maps.png'; 
-import MultiplePlayers from 'src/lib/assets/images/portfolioImages/chainReactionGame/multiple_players_1.png'; 
-import Maps2 from 'src/lib/assets/images/portfolioImages/chainReactionGame/maps_2.png'; 
-import MultiplePlayers2 from 'src/lib/assets/images/portfolioImages/chainReactionGame/multiple_players_2.png'; 
-import Victory from 'src/lib/assets/images/portfolioImages/chainReactionGame/victory.png'; 
+import MainMenu from '$lib/assets/images/portfolioImages/chainReactionGame/main_menu.png';
+import GamePlay from '$lib/assets/images/portfolioImages/chainReactionGame/gameplay.png'; 
+import MapsMenu from '$lib/assets/images/portfolioImages/chainReactionGame/maps.png'; 
+import MultiplePlayers from '$lib/assets/images/portfolioImages/chainReactionGame/multiple_players_1.png'; 
+import Maps2 from '$lib/assets/images/portfolioImages/chainReactionGame/maps_2.png'; 
+import MultiplePlayers2 from '$lib/assets/images/portfolioImages/chainReactionGame/multiple_players_2.png'; 
+import Victory from '$lib/assets/images/portfolioImages/chainReactionGame/victory.png'; 
 
 export const chainReactionImages: ImageSource[] = [
     new ImageSource(

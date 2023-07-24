@@ -59,7 +59,7 @@
                                     class="h1 font-bold">
                                     Loejee Miguel L. Dulaugon
                                 </h1>
-                                <p transition:fly={{ x: -250, duration: generalDuration, delay: spaceBgFade }}>
+                                <p transition:fly={{ x: -250, duration: generalDuration, delay: spaceBgFade + 500}}>
                                     I am a flexible programmer learner capable of software engineering, game development and web development. 
                                     With tools such as Flutter, Godot Engine and Svelte
                                 </p>

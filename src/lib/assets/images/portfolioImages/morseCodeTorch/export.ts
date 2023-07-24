@@ -1,8 +1,8 @@
 import ImageSource from "$lib/models/ImageSource";
-import HomePage from 'src/lib/assets/images/portfolioImages/morseCodeTorch/home_page.png'; 
-import MorseCodeWrite from 'src/lib/assets/images/portfolioImages/morseCodeTorch/morse_code_write.png'; 
-import SaveHistory from 'src/lib/assets/images/portfolioImages/morseCodeTorch/save_history.png'; 
-import Save from 'src/lib/assets/images/portfolioImages/morseCodeTorch/save.png'; 
+import HomePage from '$lib/assets/images/portfolioImages/morseCodeTorch/home_page.png'; 
+import MorseCodeWrite from '$lib/assets/images/portfolioImages/morseCodeTorch/morse_code_write.png'; 
+import SaveHistory from '$lib/assets/images/portfolioImages/morseCodeTorch/save_history.png'; 
+import Save from '$lib/assets/images/portfolioImages/morseCodeTorch/save.png'; 
 
 export const morseCodeTorchImages: ImageSource[] = [
     new ImageSource(
