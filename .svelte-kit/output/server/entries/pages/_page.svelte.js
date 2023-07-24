@@ -1,4 +1,4 @@
-import { c as create_ssr_component, i as add_styles, d as each, v as validate_component, e as escape, a as add_attribute, n as now, l as loop, h as subscribe } from "../../chunks/index2.js";
+import { c as create_ssr_component, e as escape, i as add_styles, d as each, v as validate_component, a as add_attribute, n as now, l as loop, h as subscribe } from "../../chunks/index2.js";
 import { J as JumpButton, j as jumps, A as ArrowUp, c as currentPortfolioIndex, P as PortfolioItems } from "../../chunks/ArrowUp.js";
 import { w as writable } from "../../chunks/index.js";
 function createStore() {
@@ -11,6 +11,7 @@ function createStore() {
 }
 const titleCardVisible = createStore();
 const myFace = "/_app/immutable/assets/myFace.5373a17d.jpg";
+const SpaceBackground = "/_app/immutable/assets/kai-pilger-space.da9de3ea.jpg";
 const TitleCard_svelte_svelte_type_style_lang = "";
 const css$2 = {
   code: ".vignette.svelte-6n47o9{pointer-events:none;background:radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0) 15%, rgba(0, 0, 0, 0.05) 35%, rgba(0, 0, 0, 0.1) 65%, rgba(0, 0, 0, 0.45) 100%)}",
@@ -27,7 +28,7 @@ const TitleCard = create_ssr_component(($$result, $$props, $$bindings, slots) =>
     $$bindings.scrollY(scrollY);
   $$result.css.add(css$2);
   return `<div id="title-card" class="h-screen flex items-center justify-center relative z-[0]">${titleCardVisiblity == true ? `<div class="vignette h-screen w-screen fixed z-[2] svelte-6n47o9"></div>
-            <div class="bg-[url(src/lib/assets/images/background/kai-pilger-space.jpg)] h-full w-full flex items-center justify-center relative z-[0]"><div class="relative z-[3]"${add_styles({
+            <div class="${"bg-[url(" + escape(SpaceBackground, true) + ")] h-full w-full flex items-center justify-center relative z-[0] svelte-6n47o9"}"><div class="relative z-[3]"${add_styles({
     "transform": `translate3d(0, ${scrollY * parallaxSpeed}px, 0)`
   })}><div class="h-screen flex items-center justify-center"><div class="grid lg:grid-cols-2 gap-8 items-center"><div class="flex flex-col w-96 gap-y-8"><h1 class="h1 font-bold">Loejee Miguel L. Dulaugon
                                 </h1>
@@ -104,35 +105,40 @@ class ImageSource {
     this.name = name;
   }
 }
+const Godot = "/_app/immutable/assets/godot.d87f4cc3.svg";
+const Flutter = "/_app/immutable/assets/flutter.074a68fc.svg";
+const Dart = "/_app/immutable/assets/dart.bd089d39.svg";
+const HiveDB = "/_app/immutable/assets/hiveDB.e2c0e2ee.png";
+const GoogleAdMob = "/_app/immutable/assets/googleAdMob.d468cd80.svg";
 const logos = new Map(
   Object.entries({
     Godot: new ImageSource(
-      "src/lib/assets/images/logos/godot.svg",
+      Godot,
       "Godot Icon",
       "Godot"
     ),
     GDScript: new ImageSource(
-      "src/lib/assets/images/logos/godot.svg",
+      Godot,
       "GDScript Icon",
       "GDScript"
     ),
     Flutter: new ImageSource(
-      "src/lib/assets/images/logos/flutter.svg",
+      Flutter,
       "Flutter Icon",
       "Flutter"
     ),
     Dart: new ImageSource(
-      "src/lib/assets/images/logos/dart.svg",
+      Dart,
       "Dart Icon",
       "Dart"
     ),
     HiveDB: new ImageSource(
-      "src/lib/assets/images/logos/hiveDB.png",
+      HiveDB,
       "HiveDB Icon",
       "HiveDB"
     ),
     GoogleAdMob: new ImageSource(
-      "src/lib/assets/images/logos/googleAdMob.svg",
+      GoogleAdMob,
       "GoogleAdMob Icon",
       "AdMob"
     )
@@ -255,51 +261,62 @@ const PortfolioContentImageCarousel = create_ssr_component(($$result, $$props, $
 	
 	<button type="button" class="btn-icon variant-filled">${validate_component(ArrowRight, "ArrowRight").$$render($$result, {}, {}, {})}</button></div>`;
 });
+const MainMenu = "/_app/immutable/assets/main_menu.b0b18c75.png";
+const GamePlay = "/_app/immutable/assets/gameplay.09caacb1.png";
+const MapsMenu = "/_app/immutable/assets/maps.17bd97a8.png";
+const MultiplePlayers = "/_app/immutable/assets/multiple_players_1.5ee0312b.png";
+const Maps2 = "/_app/immutable/assets/maps_2.d327e941.png";
+const MultiplePlayers2 = "/_app/immutable/assets/multiple_players_2.0a3caca8.png";
+const Victory = "/_app/immutable/assets/victory.8906a09a.png";
 const chainReactionImages = [
   new ImageSource(
-    "src/lib/assets/images/portfolioImages/chainReactionGame/main_menu.png",
+    MainMenu,
     "Main Menu"
   ),
   new ImageSource(
-    "src/lib/assets/images/portfolioImages/chainReactionGame/gameplay.png",
+    GamePlay,
     "Gameplay"
   ),
   new ImageSource(
-    "src/lib/assets/images/portfolioImages/chainReactionGame/maps.png",
+    MapsMenu,
     "Maps Menu"
   ),
   new ImageSource(
-    "src/lib/assets/images/portfolioImages/chainReactionGame/multiple_players_1.png",
+    MultiplePlayers,
     "Gameplay 2"
   ),
   new ImageSource(
-    "src/lib/assets/images/portfolioImages/chainReactionGame/maps_2.png",
+    Maps2,
     "Maps Menu 2"
   ),
   new ImageSource(
-    "src/lib/assets/images/portfolioImages/chainReactionGame/multiple_players_2.png",
+    MultiplePlayers2,
     "Gameplay e"
   ),
   new ImageSource(
-    "src/lib/assets/images/portfolioImages/chainReactionGame/victory.png",
+    Victory,
     "Victory Screen"
   )
 ];
+const HomePage = "/_app/immutable/assets/home_page.ed323009.png";
+const MorseCodeWrite = "/_app/immutable/assets/morse_code_write.f1969033.png";
+const SaveHistory = "/_app/immutable/assets/save_history.13f683f4.png";
+const Save = "/_app/immutable/assets/save.a9138f14.png";
 const morseCodeTorchImages = [
   new ImageSource(
-    "src/lib/assets/images/portfolioImages/morseCodeTorch/home_page.png",
+    HomePage,
     "Home Page"
   ),
   new ImageSource(
-    "src/lib/assets/images/portfolioImages/morseCodeTorch/morse_code_write.png",
+    MorseCodeWrite,
     "Writing Morse Code"
   ),
   new ImageSource(
-    "src/lib/assets/images/portfolioImages/morseCodeTorch/save_history.png",
+    SaveHistory,
     "Save History Page"
   ),
   new ImageSource(
-    "src/lib/assets/images/portfolioImages/morseCodeTorch/save.png",
+    Save,
     "Saving"
   )
 ];
@@ -315,8 +332,9 @@ const GooglePlayButton = create_ssr_component(($$result, $$props, $$bindings, sl
   $$result.css.add(css$1);
   return `<a class="btn btn-google svelte-76j597"${add_attribute("href", href, 0)} title="Google Play">Google Play</a>`;
 });
+const LuluGIF = "/_app/immutable/assets/blue_feel.82deaedd.png";
 const About = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `<div class="h-screen"><div id="about" class="flex bg-[url(src/lib/assets/images/background/blue_feel.png)] h-screen items-center justify-center relative z-[1]">${``}</div></div>`;
+  return `<div class="h-screen"><div id="about" class="${"flex bg-[url(" + escape(LuluGIF, true) + ")] h-screen items-center justify-center relative z-[1]"}">${``}</div></div>`;
 });
 const Contacts = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `<div id="contacts" class="flex h-screen items-center justify-center bg-slate-950">${``}</div>`;

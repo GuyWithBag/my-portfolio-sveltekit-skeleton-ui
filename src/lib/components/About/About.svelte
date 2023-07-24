@@ -8,6 +8,7 @@
 	import { cubicInOut } from "svelte/easing";
 	import { onObserve } from "$lib/domain/elements";
 	import { spin } from "$lib/transitions/spin";
+    import LuluGIF from "$lib/assets/images/background/blue_feel.png"; 
     
     // let scrollY: number; 
 
@@ -49,7 +50,7 @@
 <div class="h-screen">
     <div 
         id="about" 
-        class="flex bg-[url(src/lib/assets/images/background/blue_feel.png)] h-screen items-center justify-center relative z-[1]"
+        class="flex bg-[url({LuluGIF})] h-screen items-center justify-center relative z-[1]"
     >
         {#if visible}
             <div class="grid lg:grid-cols-2 w-[60rem] justify-center items-center">
