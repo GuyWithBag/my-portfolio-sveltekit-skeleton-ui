@@ -1,6 +1,5 @@
 <script lang="ts">
 	import TitleCard from "$lib/components/TitleCard/TitleCard.svelte";
-	import { onMount } from 'svelte';
 	import { currentPortfolioIndex, PortfolioItems } from '$lib/controllers/export.ts'; 
 	import PortfolioViewer from "$lib/components/PortfolioViewer/PortfolioViewer.svelte";
 	import PortfolioContent from "$lib/components/PortfolioViewer/PortfolioContent.svelte";
@@ -9,10 +8,7 @@
 	import { chainReactionImages } from '$lib/assets/images/portfolioImages/chainReactionGame/export.ts'; 
 	import { morseCodeTorchImages } from '$lib/assets/images/portfolioImages/morseCodeTorch/export.ts'; 
 	import GooglePlayButton from "$lib/components/CustomButtons/GooglePlayButton.svelte";
-	import AboutParagraphBlock from "$lib/components/AboutParagraphBlock.svelte";
 	import About from "$lib/components/About/About.svelte";
-	import { fade } from "svelte/transition";
-	import { quintOut } from "svelte/easing";
 	import Contacts from "$lib/components/Contacts/Contacts.svelte";
 	
 	let curPortfolioIndex: number; 
