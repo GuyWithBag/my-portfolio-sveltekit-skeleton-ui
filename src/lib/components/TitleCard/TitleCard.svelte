@@ -4,7 +4,7 @@
     import { cubicInOut, quadIn } from 'svelte/easing';
     import JumpButton from '../JumpButton.svelte'; 
     import myFace from '$lib/assets/images/myFace.jpg'; 
-    import SpaceBackground from "$lib/assets/images/background/kai-pilger-space.jpg"
+    import SpaceBackground from '../../assets/images/background/kai-pilger-space.jpg'
 	import { headerVisible, titleCardVisible } from '$lib/controllers/export.ts';
 	import { onMount } from 'svelte';
 	import { onObserve } from '$lib/domain/elements.ts';
@@ -13,7 +13,7 @@
     let generalDelay: number = 500; 
 	let titleCardVisiblity: boolean
 	let parallaxSpeed: number = 0.6; 
-    let spaceBgFade: number = 5000; 
+    let spaceBgFade: number = 3500; 
     export let scrollY: number; 
 
     function delayedFly(delay: number) {
@@ -48,7 +48,7 @@
             <div class="vignette h-screen w-screen fixed z-[2]"></div>
             <div 
                 transition:fade={{duration: spaceBgFade, easing: quadIn}}
-                class=" bg-[{SpaceBackground}] h-full w-full flex items-center justify-center relative z-[0]"
+                class=" bg-[url({SpaceBackground.replace('/src/lib/', '../../')})] h-full w-full flex items-center justify-center relative z-[0]"
             >
                 <div class="relative z-[3]" style:transform={`translate3d(0, ${scrollY * parallaxSpeed}px, 0)`}>
                     <div class="h-screen flex items-center justify-center">
@@ -79,7 +79,7 @@
                                 </div>
                             </div>
                             <img 
-                                transition:fade={{duration: generalDuration * 3, easing: cubicInOut }}
+                                transition:fade={{duration: generalDuration * 3, easing: cubicInOut, delay: spaceBgFade }}
                                 class="object-cover h-96 w-96 rounded-full" 
                                 src={myFace} 
                                 alt="My Face"

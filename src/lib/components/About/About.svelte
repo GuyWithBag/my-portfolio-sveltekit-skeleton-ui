@@ -8,7 +8,8 @@
 	import { cubicInOut } from "svelte/easing";
 	import { onObserve } from "$lib/domain/elements";
 	import { spin } from "$lib/transitions/spin";
-    import LuluGIF from "$lib/assets/images/background/blue_feel.png"; 
+    import BlueFeel from "$lib/assets/images/background/blue_feel.png"; 
+    import LuluGIF from "$lib/assets/gifs/lulu.gif"; 
     
     // let scrollY: number; 
 
@@ -45,18 +46,22 @@
         )
     })
 
+$: {
+    console.log(BlueFeel); 
+}
+
 </script>
 
 <div class="h-screen">
     <div 
         id="about" 
-        class="flex bg-[url({LuluGIF})] h-screen items-center justify-center relative z-[1]"
+        class="BlueFeel flex h-screen items-center justify-center relative z-[1]"
     >
         {#if visible}
             <div class="grid lg:grid-cols-2 w-[60rem] justify-center items-center">
                 <div transition:spin={{duration: 1000, easing: cubicInOut, times: 8}}>
-                    <img 
-                        src="src/lib/assets/gifs/lulu.gif"
+                    <img  
+                        src={LuluGIF}
                         alt="Lulu Legends Of Runterra Emote"
                     />
                 </div>
@@ -76,3 +81,11 @@
         {/if}
     </div>
 </div>
+
+<style>
+    .BlueFeel {
+        background-image: url("../../assets/images/background/blue_feel.png"); 
+    }
+    
+</style>
+
