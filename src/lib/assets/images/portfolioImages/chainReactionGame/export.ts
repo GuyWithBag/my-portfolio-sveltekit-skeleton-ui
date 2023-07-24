@@ -1,32 +1,39 @@
-import ImageSource from "$lib/models/ImageSource";
+import ImageSource from "$lib/models/ImageSource"; 
+import MainMenu from 'src/lib/assets/images/portfolioImages/chainReactionGame/main_menu.png';
+import GamePlay from 'src/lib/assets/images/portfolioImages/chainReactionGame/gameplay.png'; 
+import MapsMenu from 'src/lib/assets/images/portfolioImages/chainReactionGame/maps.png'; 
+import MultiplePlayers from 'src/lib/assets/images/portfolioImages/chainReactionGame/multiple_players_1.png'; 
+import Maps2 from 'src/lib/assets/images/portfolioImages/chainReactionGame/maps_2.png'; 
+import MultiplePlayers2 from 'src/lib/assets/images/portfolioImages/chainReactionGame/multiple_players_2.png'; 
+import Victory from 'src/lib/assets/images/portfolioImages/chainReactionGame/victory.png'; 
 
 export const chainReactionImages: ImageSource[] = [
     new ImageSource(
-        'src/lib/assets/images/portfolioImages/chainReactionGame/main_menu.png', 
+        MainMenu, 
         "Main Menu"
     ), 
     new ImageSource(
-        'src/lib/assets/images/portfolioImages/chainReactionGame/gameplay.png', 
+        GamePlay, 
         "Gameplay"
     ), 
     new ImageSource(
-        'src/lib/assets/images/portfolioImages/chainReactionGame/maps.png', 
+        MapsMenu, 
         "Maps Menu"
     ), 
     new ImageSource(
-        'src/lib/assets/images/portfolioImages/chainReactionGame/multiple_players_1.png', 
+        MultiplePlayers, 
         "Gameplay 2"
     ), 
     new ImageSource(
-        'src/lib/assets/images/portfolioImages/chainReactionGame/maps_2.png', 
+        Maps2, 
         "Maps Menu 2"
     ), 
     new ImageSource(
-        'src/lib/assets/images/portfolioImages/chainReactionGame/multiple_players_2.png', 
+        MultiplePlayers2, 
         "Gameplay e"
     ), 
     new ImageSource(
-        'src/lib/assets/images/portfolioImages/chainReactionGame/victory.png', 
+        Victory, 
         "Victory Screen"
     ), 
 ]
