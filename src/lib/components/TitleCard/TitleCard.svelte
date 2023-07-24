@@ -4,7 +4,6 @@
     import { cubicInOut, quadIn } from 'svelte/easing';
     import JumpButton from '../JumpButton.svelte'; 
     import myFace from '$lib/assets/images/myFace.jpg'; 
-    import SpaceBackground from '../../assets/images/background/kai-pilger-space.jpg'
 	import { headerVisible, titleCardVisible } from '$lib/controllers/export.ts';
 	import { onMount } from 'svelte';
 	import { onObserve } from '$lib/domain/elements.ts';
@@ -48,7 +47,7 @@
             <div class="vignette h-screen w-screen fixed z-[2]"></div>
             <div 
                 transition:fade={{duration: spaceBgFade, easing: quadIn}}
-                class=" bg-[url({SpaceBackground.replace('/src/lib/', '../../')})] h-full w-full flex items-center justify-center relative z-[0]"
+                class=" space-background h-full w-full flex items-center justify-center relative z-[0]"
             >
                 <div class="relative z-[3]" style:transform={`translate3d(0, ${scrollY * parallaxSpeed}px, 0)`}>
                     <div class="h-screen flex items-center justify-center">
@@ -96,6 +95,11 @@
         pointer-events: none; 
         background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0) 15%, rgba(0, 0, 0, 0.05) 35%, rgba(0, 0, 0, 0.1) 65%, rgba(0, 0, 0, 0.45) 100%);
     }
+
+    .space-background {
+        background-image: url("../../assets/images/background/kai-pilger-space.jpg") !important; 
+    }
+    
 </style>
 
 

@@ -55,7 +55,7 @@ $: {
 <div class="h-screen">
     <div 
         id="about" 
-        class="BlueFeel flex h-screen items-center justify-center relative z-[1]"
+        class="blue-feel flex h-screen items-center justify-center relative z-[1]"
     >
         {#if visible}
             <div class="grid lg:grid-cols-2 w-[60rem] justify-center items-center">
@@ -83,8 +83,8 @@ $: {
 </div>
 
 <style>
-    .BlueFeel {
-        background-image: url("../../assets/images/background/blue_feel.png"); 
+    .blue-feel {
+        background-image: url("../../assets/images/background/blue_feel.png") !important; 
     }
     
 </style>
