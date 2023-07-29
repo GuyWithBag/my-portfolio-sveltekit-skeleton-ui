@@ -91,7 +91,7 @@
 								</PortfolioContentBio>
 							</div>
 							<div slot="actions">
-								<GooglePlayButton href="https://github.com/GuyWithBag"/>
+								<GooglePlayButton href="https://play.google.com/store/apps/details?id=org.MacchiMatchaProductions.morse_code_torch"/>
 							</div>
 							<div slot="images">
 								<PortfolioContentImages imageSources={morseCodeTorchImages}/>
