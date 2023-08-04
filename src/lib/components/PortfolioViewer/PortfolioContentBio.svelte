@@ -15,7 +15,7 @@
     <h1 class="h2 font-bold" in:typewriter={{duration: headerWriteDuration}}>
         <slot name="title" />
     </h1>
-    <div class="grid gap-2 justify-start grid-cols-3 overflow-visible grid-flow-dense " >
+    <div class="grid gap-2 justify-start grid-cols-3 overflow-visible grid-flow-dense ">
         {#each displayLogos as logo}
             {#if logos.has(logo)}
                 <LogoButton 

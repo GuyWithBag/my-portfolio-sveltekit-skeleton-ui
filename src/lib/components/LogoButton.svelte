@@ -5,7 +5,7 @@
     export let href: string = "https://github.com/GuyWithBag"; 
 </script>
 
-<a href={href} class="btn variant-filled h-6">
+<a href={href} class="btn variant-filled h-6"  target="_blank">
     <img 
         class="h-7 w-7 py-1 object-scale-down"
         src={logo} 

@@ -8,9 +8,12 @@
 	import { chainReactionImages } from '$lib/assets/images/portfolioImages/chainReactionGame/export.ts'; 
 	import { morseCodeTorchImages } from '$lib/assets/images/portfolioImages/morseCodeTorch/export.ts'; 
 	import GooglePlayButton from "$lib/components/CustomButtons/GooglePlayButton.svelte";
+	import { musicPlayerImages } from "$lib/assets/images/portfolioImages/musicPlayer/export.ts"; 
 	import About from "$lib/components/About/About.svelte";
 	import Contacts from "$lib/components/Contacts/Contacts.svelte";
-	
+	import { spring } from 'svelte/motion';
+	import { logos } from "$lib/assets/images/logos/export.ts"; 
+
 	let curPortfolioIndex: number; 
 	let scrollY: number; 
 	
@@ -22,7 +25,7 @@
 		curPortfolioIndex = value; 
 	})
 	
-	import { spring } from 'svelte/motion';
+
 
 	let coords = spring({ x: 50, y: 50 }, {
 		stiffness: 0.1,
@@ -58,7 +61,7 @@
 						<PortfolioContent>
 							<div slot="bio">
 								<PortfolioContentBio displayLogos={["Flutter", "Dart", "HiveDB"]}>
-									<span slot="title">Music Player</span>
+									<span slot="title">Music Player (W.I.P.)</span>
 									<p slot="body">
 										I was tired of finding things that are lacking in most music players. <br>
 										<br>
@@ -69,10 +72,17 @@
 								</PortfolioContentBio>
 							</div>
 							<div slot="actions">
-								<GooglePlayButton href="https://github.com/GuyWithBag"/>
+								<a class="btn variant-filled" href="https://github.com/GuyWithBag/my_music_player" target="_blank">
+									<img 
+										class="h-5"
+										src={logos.get("GithubMark")?.src} 
+										alt={logos.get("GithubMark")?.alt} 
+									/>
+									<span>Github</span>
+								</a>
 							</div>
 							<div slot="images">
-								<PortfolioContentImages imageSources={chainReactionImages}/>
+								<PortfolioContentImages imageSources={musicPlayerImages}/>
 							</div>
 						</PortfolioContent>
 					{:else if curPortfolioIndex == PortfolioItems.MORSE_CODE_TORCH}

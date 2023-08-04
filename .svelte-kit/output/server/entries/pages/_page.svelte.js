@@ -1,4 +1,4 @@
-import { c as create_ssr_component, e as escape, i as add_styles, d as each, v as validate_component, a as add_attribute, n as now, l as loop, h as subscribe } from "../../chunks/index2.js";
+import { c as create_ssr_component, i as add_styles, d as each, v as validate_component, e as escape, a as add_attribute, n as now, l as loop, h as subscribe } from "../../chunks/index2.js";
 import { J as JumpButton, j as jumps, A as ArrowUp, c as currentPortfolioIndex, P as PortfolioItems } from "../../chunks/ArrowUp.js";
 import { w as writable } from "../../chunks/index.js";
 function createStore() {
@@ -11,10 +11,9 @@ function createStore() {
 }
 const titleCardVisible = createStore();
 const myFace = "/_app/immutable/assets/myFace.5373a17d.jpg";
-const SpaceBackground = "/_app/immutable/assets/kai-pilger-space.da9de3ea.jpg";
 const TitleCard_svelte_svelte_type_style_lang = "";
-const css$2 = {
-  code: ".vignette.svelte-6n47o9{pointer-events:none;background:radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0) 15%, rgba(0, 0, 0, 0.05) 35%, rgba(0, 0, 0, 0.1) 65%, rgba(0, 0, 0, 0.45) 100%)}",
+const css$3 = {
+  code: '.vignette.svelte-102ric7{pointer-events:none;background:radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0) 15%, rgba(0, 0, 0, 0.05) 35%, rgba(0, 0, 0, 0.1) 65%, rgba(0, 0, 0, 0.45) 100%)}.space-background.svelte-102ric7{background-image:url("../../assets/images/background/kai-pilger-space.jpg") !important}',
   map: null
 };
 let parallaxSpeed = 0.6;
@@ -26,9 +25,9 @@ const TitleCard = create_ssr_component(($$result, $$props, $$bindings, slots) =>
   });
   if ($$props.scrollY === void 0 && $$bindings.scrollY && scrollY !== void 0)
     $$bindings.scrollY(scrollY);
-  $$result.css.add(css$2);
-  return `<div id="title-card" class="h-screen flex items-center justify-center relative z-[0]">${titleCardVisiblity == true ? `<div class="vignette h-screen w-screen fixed z-[2] svelte-6n47o9"></div>
-            <div class="${"bg-[url(" + escape(SpaceBackground, true) + ")] h-full w-full flex items-center justify-center relative z-[0] svelte-6n47o9"}"><div class="relative z-[3]"${add_styles({
+  $$result.css.add(css$3);
+  return `<div id="title-card" class="h-screen flex items-center justify-center relative z-[0]">${titleCardVisiblity == true ? `<div class="vignette h-screen w-screen fixed z-[2] svelte-102ric7"></div>
+            <div class="space-background h-full w-full flex items-center justify-center relative z-[0] svelte-102ric7"><div class="relative z-[3]"${add_styles({
     "transform": `translate3d(0, ${scrollY * parallaxSpeed}px, 0)`
   })}><div class="h-screen flex items-center justify-center"><div class="grid lg:grid-cols-2 gap-8 items-center"><div class="flex flex-col w-96 gap-y-8"><h1 class="h1 font-bold">Loejee Miguel L. Dulaugon
                                 </h1>
@@ -110,6 +109,7 @@ const Flutter = "/_app/immutable/assets/flutter.074a68fc.svg";
 const Dart = "/_app/immutable/assets/dart.bd089d39.svg";
 const HiveDB = "/_app/immutable/assets/hiveDB.e2c0e2ee.png";
 const GoogleAdMob = "/_app/immutable/assets/googleAdMob.d468cd80.svg";
+const GithubMark = "/_app/immutable/assets/githubMark.7a0dd11e.svg";
 const logos = new Map(
   Object.entries({
     Godot: new ImageSource(
@@ -141,6 +141,11 @@ const logos = new Map(
       GoogleAdMob,
       "GoogleAdMob Icon",
       "AdMob"
+    ),
+    GithubMark: new ImageSource(
+      GithubMark,
+      "GithubMark Icon",
+      "GithubMark"
     )
   })
 );
@@ -157,7 +162,7 @@ const LogoButton = create_ssr_component(($$result, $$props, $$bindings, slots) =
     $$bindings.label(label);
   if ($$props.href === void 0 && $$bindings.href && href !== void 0)
     $$bindings.href(href);
-  return `<a${add_attribute("href", href, 0)} class="btn variant-filled h-6"><img class="h-7 w-7 py-1 object-scale-down"${add_attribute("src", logo, 0)}${add_attribute("alt", alt, 0)}>
+  return `<a${add_attribute("href", href, 0)} class="btn variant-filled h-6" target="_blank"><img class="h-7 w-7 py-1 object-scale-down"${add_attribute("src", logo, 0)}${add_attribute("alt", alt, 0)}>
     <span>${escape(label)}</span></a>`;
 });
 const PortfolioContentBio = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -321,7 +326,7 @@ const morseCodeTorchImages = [
   )
 ];
 const GooglePlayButton_svelte_svelte_type_style_lang = "";
-const css$1 = {
+const css$2 = {
   code: "@font-face{font-family:'fontfutura';src:url('https://fonts.googleapis.com/css?family=Open+Sans') format('ttf');font-weight:normal;font-style:normal}a.btn-google.svelte-76j597{color:#fff}.btn.svelte-76j597{padding:10px 16px;font-size:18px;line-height:1.3333333;border-radius:6px;text-align:center;white-space:nowrap;vertical-align:middle;-ms-touch-action:manipulation;touch-action:manipulation;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;border:1px solid transparent;font-weight:500;text-decoration:none;display:inline-block}.btn.svelte-76j597:active:focus,.btn.svelte-76j597:focus{outline:0}.btn.svelte-76j597:focus,.btn.svelte-76j597:hover{color:#333;text-decoration:none;outline:0}.btn.svelte-76j597:active{outline:0;-webkit-box-shadow:inset 0 3px 5px rgba(0, 0, 0, 0.125);box-shadow:inset 0 3px 5px rgba(0, 0, 0, 0.125)}.btn-google.svelte-76j597{color:#fff;background-color:#111;border-color:#000;padding:15px 16px 5px 40px;position:relative;font-family:fontfutura;font-weight:600}.btn-google.svelte-76j597:focus{color:#fff;background-color:#555;border-color:#000}.btn-google.svelte-76j597:active,.btn-google.svelte-76j597:hover{color:#fff;background-color:#555;border-color:#000}.btn-google.svelte-76j597:before{content:'';background-image:url(https://4.bp.blogspot.com/-52U3eP2JDM4/WSkIT1vbUxI/AAAAAAAArQA/iF1BeARv2To-2FGQU7V6UbNPivuv_lccACLcB/s30/nexus2cee_ic_launcher_play_store_new-1.png);background-size:cover;background-repeat:no-repeat;width:30px;height:30px;position:absolute;left:6px;top:50%;margin-top:-15px}.btn-google.svelte-76j597:after{content:'GET IT ON';position:absolute;top:5px;left:40px;font-size:10px;font-weight:400}",
   map: null
 };
@@ -329,12 +334,66 @@ const GooglePlayButton = create_ssr_component(($$result, $$props, $$bindings, sl
   let { href } = $$props;
   if ($$props.href === void 0 && $$bindings.href && href !== void 0)
     $$bindings.href(href);
-  $$result.css.add(css$1);
+  $$result.css.add(css$2);
   return `<a class="btn btn-google svelte-76j597"${add_attribute("href", href, 0)} title="Google Play">Google Play</a>`;
 });
-const LuluGIF = "/_app/immutable/assets/blue_feel.82deaedd.png";
+const AudioPlayerImage = "/_app/immutable/assets/audio_player.8474e8dc.jpg";
+const PlaylistList = "/_app/immutable/assets/playlist_list.987a7107.jpg";
+const PlaylistPage = "/_app/immutable/assets/playlist_page.f14fd11e.jpg";
+const SearchResults = "/_app/immutable/assets/search_results.67751409.jpg";
+const Settings = "/_app/immutable/assets/settings.72d8d8c3.jpg";
+const SongListDrag = "/_app/immutable/assets/song_list_drag.0aeb5712.jpg";
+const SongMoreOptions = "/_app/immutable/assets/song_more_options.deaad98b.jpg";
+const AddToPlaylist = "/_app/immutable/assets/add_to_playlist.9c823056.jpg";
+const musicPlayerImages = [
+  new ImageSource(
+    AudioPlayerImage,
+    "Audio Player Image"
+  ),
+  new ImageSource(
+    PlaylistList,
+    "Playlist List"
+  ),
+  new ImageSource(
+    PlaylistPage,
+    "Playlist Page"
+  ),
+  new ImageSource(
+    SearchResults,
+    "Search Results"
+  ),
+  new ImageSource(
+    Settings,
+    "Settings"
+  ),
+  new ImageSource(
+    SongListDrag,
+    "Song List Drag"
+  ),
+  new ImageSource(
+    SongMoreOptions,
+    "Song More Options"
+  ),
+  new ImageSource(
+    AddToPlaylist,
+    "Add To Playlist"
+  )
+];
+const BlueFeel = "/_app/immutable/assets/blue_feel.82deaedd.png";
+const About_svelte_svelte_type_style_lang = "";
+const css$1 = {
+  code: '.blue-feel.svelte-13ibx9w{background-image:url("../../assets/images/background/blue_feel.png") !important}',
+  map: null
+};
 const About = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `<div class="h-screen"><div id="about" class="${"flex bg-[url(" + escape(LuluGIF, true) + ")] h-screen items-center justify-center relative z-[1]"}">${``}</div></div>`;
+  $$result.css.add(css$1);
+  {
+    {
+      console.log(BlueFeel);
+    }
+  }
+  return `<div class="h-screen"><div id="about" class="blue-feel flex h-screen items-center justify-center relative z-[1] svelte-13ibx9w">${``}</div>
+</div>`;
 });
 const Contacts = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `<div id="contacts" class="flex h-screen items-center justify-center bg-slate-950">${``}</div>`;
@@ -462,10 +521,11 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     default: () => {
       return `${curPortfolioIndex == PortfolioItems.MUSIC_PLAYER ? `${validate_component(PortfolioContent, "PortfolioContent").$$render($$result, {}, {}, {
         images: () => {
-          return `<div slot="images">${validate_component(PortfolioContentImageCarousel, "PortfolioContentImages").$$render($$result, { imageSources: chainReactionImages }, {}, {})}</div>`;
+          return `<div slot="images">${validate_component(PortfolioContentImageCarousel, "PortfolioContentImages").$$render($$result, { imageSources: musicPlayerImages }, {}, {})}</div>`;
         },
         actions: () => {
-          return `<div slot="actions">${validate_component(GooglePlayButton, "GooglePlayButton").$$render($$result, { href: "https://github.com/GuyWithBag" }, {}, {})}</div>`;
+          return `<div slot="actions"><a class="btn variant-filled" href="https://github.com/GuyWithBag/my_music_player" target="_blank"><img class="h-5"${add_attribute("src", logos.get("GithubMark")?.src, 0)}${add_attribute("alt", logos.get("GithubMark")?.alt, 0)}>
+									<span>Github</span></a></div>`;
         },
         bio: () => {
           return `<div slot="bio">${validate_component(PortfolioContentBio, "PortfolioContentBio").$$render(
@@ -484,7 +544,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
 									</p>`;
               },
               title: () => {
-                return `<span slot="title">Music Player</span>`;
+                return `<span slot="title">Music Player (W.I.P.)</span>`;
               }
             }
           )}</div>`;
@@ -494,7 +554,14 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
           return `<div slot="images">${validate_component(PortfolioContentImageCarousel, "PortfolioContentImages").$$render($$result, { imageSources: morseCodeTorchImages }, {}, {})}</div>`;
         },
         actions: () => {
-          return `<div slot="actions">${validate_component(GooglePlayButton, "GooglePlayButton").$$render($$result, { href: "https://github.com/GuyWithBag" }, {}, {})}</div>`;
+          return `<div slot="actions">${validate_component(GooglePlayButton, "GooglePlayButton").$$render(
+            $$result,
+            {
+              href: "https://play.google.com/store/apps/details?id=org.MacchiMatchaProductions.morse_code_torch"
+            },
+            {},
+            {}
+          )}</div>`;
         },
         bio: () => {
           return `<div slot="bio">${validate_component(PortfolioContentBio, "PortfolioContentBio").$$render(
