@@ -11,7 +11,7 @@
     let generalDuration: number = 1000; 
     let generalDelay: number = 500; 
 	let titleCardVisiblity: boolean
-	let parallaxSpeed: number = 0.6; 
+	let parallaxSpeed: number = 1.5; 
     let spaceBgFade: number = 3500; 
     export let scrollY: number; 
 
@@ -39,8 +39,8 @@
             }
         )
 	}); 
-    
-</script>
+
+</script> 
 
 <div id="title-card"  class="h-screen flex items-center justify-center relative z-[0]">
     {#if titleCardVisiblity == true}
@@ -51,22 +51,22 @@
             >
                 <div class="relative z-[3]" style:transform={`translate3d(0, ${scrollY * parallaxSpeed}px, 0)`}>
                     <div class="h-screen flex items-center justify-center">
-                        <div class="grid lg:grid-cols-2 gap-8 items-center">
-                            <div class="flex flex-col w-96 gap-y-8">
+                        <div class="grid lg:grid-cols-2 gap-x-8 ga-y-1 place-items-center lg:w-[50rem] w-[19rem]">
+                            <div class="flex flex-col lg:gap-y-5 gap-1">
                                 <h1 
                                     transition:fly={{ y: -250, duration: generalDuration, delay: spaceBgFade }}
-                                    class="h1 font-bold">
+                                    class="h1 font-bold lg:text-left text-center">
                                     Loejee Miguel L. Dulaugon
                                 </h1>
-                                <p transition:fly={{ x: -250, duration: generalDuration, delay: spaceBgFade + 500}}>
+                                <p class="lg:text-[15px] lg:text-left text-center" transition:fly={{ x: -250, duration: generalDuration, delay: spaceBgFade + 500}}>
                                     I am a flexible programmer learner capable of software engineering, game development and web development. 
                                     With tools such as Flutter, Godot Engine and Svelte
                                 </p>
-                                <div class="grid grid-cols-3 gap-3">
+                                <div class="grid grid-cols-3 gap-1 lg:gap-3">
                                     <button 
                                         in:fly={delayedFly(generalDelay)}
                                         type="button" 
-                                        class="btn variant-filled !bg-primary-500 !text-white"
+                                        class="btn variant-filled !bg-primary-500 !text-white text-[13px] lg:text-[16px]"
                                     >
                                         My Resume
                                     </button>
@@ -79,9 +79,9 @@
                             </div>
                             <img 
                                 transition:fade={{duration: generalDuration * 3, easing: cubicInOut, delay: spaceBgFade }}
-                                class="object-cover h-96 w-96 rounded-full" 
+                                class="object-cover lg:h-96 lg:w-96 h-64 w-64 rounded-full self-center" 
                                 src={myFace} 
-                                alt="My Face"
+                                alt="My Face" 
                             />
                         </div>
                     </div>

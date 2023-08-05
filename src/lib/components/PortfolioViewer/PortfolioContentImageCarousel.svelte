@@ -40,7 +40,7 @@
 
 <div 
 	in:fly={{y: -200 * flyDirection}}
-	class="card p-4 grid grid-cols-[auto_1fr_auto] items-center w-[25rem] object-contain"
+	class="card p-4 grid grid-cols-[auto_1fr_auto] items-center lg:w-[25rem] object-contain"
 >
 	<!-- Button: Left -->
 	<button type="button" class="btn-icon variant-filled" on:click={carouselLeft}>
@@ -54,8 +54,8 @@
 				src={imageSource.src}
 				alt={imageSource.alt}
 				loading="lazy"
-			/>
-		{/each}
+			/> 
+		{/each} 
 	</div>
 	<!-- Button: Right -->
 	<button type="button" class="btn-icon variant-filled" on:click={carouselRight}>

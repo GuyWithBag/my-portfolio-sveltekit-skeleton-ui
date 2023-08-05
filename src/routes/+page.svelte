@@ -1,6 +1,6 @@
 <script lang="ts">
 	import TitleCard from "$lib/components/TitleCard/TitleCard.svelte";
-	import { currentPortfolioIndex, PortfolioItems } from '$lib/controllers/export.ts'; 
+	import { appShellController, currentPortfolioIndex, PortfolioItems } from '$lib/controllers/export.ts'; 
 	import PortfolioViewer from "$lib/components/PortfolioViewer/PortfolioViewer.svelte";
 	import PortfolioContent from "$lib/components/PortfolioViewer/PortfolioContent.svelte";
 	import PortfolioContentBio from "$lib/components/PortfolioViewer/PortfolioContentBio.svelte";
@@ -15,18 +15,11 @@
 	import { logos } from "$lib/assets/images/logos/export.ts"; 
 
 	let curPortfolioIndex: number; 
-	let scrollY: number; 
-	
-	function scrollBind(e: any) {
-		scrollY = e!.target.scrollTop; 
-	}
 
 	currentPortfolioIndex.subscribe((value: number) => {
 		curPortfolioIndex = value; 
 	})
 	
-
-
 	let coords = spring({ x: 50, y: 50 }, {
 		stiffness: 0.1,
 		damping: 0.25
@@ -36,11 +29,11 @@
 
 </script>
 
-<circle 
+<!-- <circle 
 	cx={$coords.x}
 	cy={$coords.y}
 	class="circle-glow fixed z-[10] rounded-full"
-/>
+/> -->
 
 <div class="vignette fixed w-screen h-screen z-20"></div>
 
@@ -50,11 +43,10 @@
 	}}
 	on:mousedown={() => size.set(30)}
 	on:mouseup={() => size.set(10)}
-	class="h-screen overflow-scroll" on:scroll={scrollBind}
 >
-	<TitleCard scrollY={scrollY}/>
+	<TitleCard scrollY={$appShellController}/>
 	<div class="relative z-10">
-		<div  class="h-auto py-24 px-20 bg-surface-500 flex items-center justify-center rounded-3xl" id="works-container">
+		<div  class="min-h-screen py-24 px-20 bg-surface-500 flex items-center justify-center rounded-3xl" id="works-container">
 			<div class="px-[10rem]">
 				<PortfolioViewer>
 					{#if curPortfolioIndex == PortfolioItems.MUSIC_PLAYER}
@@ -137,12 +129,6 @@
 </div> 
 
 <style>
-	.circle-glow {
-		height: 70rem; 
-		width: 70rem;
-		background: radial-gradient(circle at 50% 50%, rgba(44, 61, 169, 0.43) 0%, rgba(255, 255, 255, 0) 100%); 
-		transform:translate(-50%,-50%);
-	}
 
 	.vignette {
 		pointer-events: none; 

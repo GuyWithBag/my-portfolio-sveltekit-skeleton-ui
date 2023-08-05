@@ -1,6 +1,6 @@
 
 <script lang="ts">
-    export let style: string = "btn variant-filled"; 
+    export let style: string = "btn variant-filled text-[13px] lg:text-[16px]"; 
     export let jumpTo: string; 
 
     function onClick() {
