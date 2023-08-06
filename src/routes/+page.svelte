@@ -95,6 +95,14 @@
 							<div slot="actions">
 								<GooglePlayButton href="https://play.google.com/store/apps/details?id=org.MacchiMatchaProductions.morse_code_torch"/>
 							</div>
+							<a class="btn variant-filled" href="https://github.com/GuyWithBag/morse_code_torch" target="_blank">
+								<img 
+									class="h-5"
+									src={logos.get("GithubMark")?.src} 
+									alt={logos.get("GithubMark")?.alt} 
+								/>
+								<span>Github</span>
+							</a>
 							<div slot="images">
 								<PortfolioContentImages imageSources={morseCodeTorchImages}/>
 							</div>

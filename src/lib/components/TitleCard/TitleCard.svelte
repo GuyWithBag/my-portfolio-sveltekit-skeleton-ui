@@ -63,13 +63,13 @@
                                     With tools such as Flutter, Godot Engine and Svelte
                                 </p>
                                 <div class="grid grid-cols-3 gap-1 lg:gap-3">
-                                    <button 
+                                    <a href="src\lib\assets\downloads\LoejeeMiguel_Dulaugon_Resume.pdf"
                                         in:fly={delayedFly(generalDelay)}
                                         type="button" 
                                         class="btn variant-filled !bg-primary-500 !text-white text-[13px] lg:text-[16px]"
                                     >
                                         My Resume
-                                    </button>
+                                    </a>
                                     {#each jumps as jump}
                                         <div in:fly={delayedFly((jumps.indexOf(jump) + 2) * generalDelay)}>
                                             <JumpButton jumpTo={jump.id}>{jump.name}</JumpButton>
