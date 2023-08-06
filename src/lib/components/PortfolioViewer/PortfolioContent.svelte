@@ -13,10 +13,6 @@
         isLargeScreen = window.isLargeScreen()
     })
 
-    function update() {
-        
-    }
-
 </script>
 
 <div class="flex flex-col lg:min-h-[34rem] justify-center content-center">
