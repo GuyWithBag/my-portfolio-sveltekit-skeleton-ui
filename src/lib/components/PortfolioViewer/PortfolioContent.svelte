@@ -26,7 +26,7 @@
             {/if}
             <div class="bio gap-2"> 
                 <slot name="bio" />
-                <div class="grid grid-cols-2 gap-2">
+                <div class="grid grid-rows-2 gap-3">
                     <slot name="actions" />
                 </div> 
             </div>

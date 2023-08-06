@@ -6,7 +6,8 @@
     import myFace from '$lib/assets/images/myFace.jpg'; 
 	import { headerVisible, titleCardVisible } from '$lib/controllers/export.ts';
 	import { onMount } from 'svelte';
-	import { onObserve } from '$lib/domain/elements.ts';
+	import { download, onObserve } from '$lib/domain/elements.ts';
+    // import Resume from 'src/lib/assets/downloads/LoejeeMiguel_Dulaugon_Resume.pdf'; 
 
     let generalDuration: number = 1000; 
     let generalDelay: number = 500; 
@@ -22,6 +23,10 @@
     titleCardVisible.subscribe(( value: boolean ) => {
 		titleCardVisiblity = value; 
 	})
+
+    function downloadResume() {
+        download('src/lib/assets/downloads/LoejeeMiguel_Dulaugon_Resume.pdf', 'LoejeeMiguel_Dulaugon_Resume.pdf')
+    }
 
 	onMount(() => {
         onObserve(
@@ -63,13 +68,13 @@
                                     With tools such as Flutter, Godot Engine and Svelte
                                 </p>
                                 <div class="grid grid-cols-3 gap-1 lg:gap-3">
-                                    <a href="src\lib\assets\downloads\LoejeeMiguel_Dulaugon_Resume.pdf" download target="_blank"
+                                    <button on:click={downloadResume}
                                         in:fly={delayedFly(generalDelay)}
                                         type="button" 
                                         class="btn variant-filled !bg-primary-500 !text-white text-[13px] lg:text-[16px]"
                                     >
                                         My Resume
-                                    </a>
+                                </button>
                                     {#each jumps as jump}
                                         <div in:fly={delayedFly((jumps.indexOf(jump) + 2) * generalDelay)}>
                                             <JumpButton jumpTo={jump.id}>{jump.name}</JumpButton>

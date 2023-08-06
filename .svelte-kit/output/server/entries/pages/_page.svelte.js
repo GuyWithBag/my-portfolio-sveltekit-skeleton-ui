@@ -1,7 +1,7 @@
 import { c as create_ssr_component, i as add_styles, d as each, v as validate_component, e as escape, a as add_attribute, n as now, l as loop, h as subscribe } from "../../chunks/index2.js";
 import { J as JumpButton, j as jumps, A as ArrowUp, c as currentPortfolioIndex, P as PortfolioItems } from "../../chunks/ArrowUp.js";
 import { w as writable } from "../../chunks/index.js";
-function createStore() {
+function createStore$1() {
   const { subscribe: subscribe2, set } = writable(false);
   return {
     subscribe: subscribe2,
@@ -9,14 +9,22 @@ function createStore() {
     hide: () => set(false)
   };
 }
-const titleCardVisible = createStore();
+const titleCardVisible = createStore$1();
+function createStore() {
+  const { subscribe: subscribe2, set } = writable(0);
+  return {
+    subscribe: subscribe2,
+    set: (value) => set(value)
+  };
+}
+const appShellController = createStore();
 const myFace = "/_app/immutable/assets/myFace.5373a17d.jpg";
 const TitleCard_svelte_svelte_type_style_lang = "";
-const css$3 = {
+const css$4 = {
   code: '.vignette.svelte-102ric7{pointer-events:none;background:radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0) 15%, rgba(0, 0, 0, 0.05) 35%, rgba(0, 0, 0, 0.1) 65%, rgba(0, 0, 0, 0.45) 100%)}.space-background.svelte-102ric7{background-image:url("../../assets/images/background/kai-pilger-space.jpg") !important}',
   map: null
 };
-let parallaxSpeed = 0.6;
+let parallaxSpeed = 1.5;
 const TitleCard = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let titleCardVisiblity;
   let { scrollY } = $$props;
@@ -25,17 +33,17 @@ const TitleCard = create_ssr_component(($$result, $$props, $$bindings, slots) =>
   });
   if ($$props.scrollY === void 0 && $$bindings.scrollY && scrollY !== void 0)
     $$bindings.scrollY(scrollY);
-  $$result.css.add(css$3);
+  $$result.css.add(css$4);
   return `<div id="title-card" class="h-screen flex items-center justify-center relative z-[0]">${titleCardVisiblity == true ? `<div class="vignette h-screen w-screen fixed z-[2] svelte-102ric7"></div>
             <div class="space-background h-full w-full flex items-center justify-center relative z-[0] svelte-102ric7"><div class="relative z-[3]"${add_styles({
     "transform": `translate3d(0, ${scrollY * parallaxSpeed}px, 0)`
-  })}><div class="h-screen flex items-center justify-center"><div class="grid lg:grid-cols-2 gap-8 items-center"><div class="flex flex-col w-96 gap-y-8"><h1 class="h1 font-bold">Loejee Miguel L. Dulaugon
+  })}><div class="h-screen flex items-center justify-center"><div class="grid lg:grid-cols-2 gap-x-8 ga-y-1 place-items-center lg:w-[50rem] w-[19rem]"><div class="flex flex-col lg:gap-y-5 gap-1"><h1 class="h1 font-bold lg:text-left text-center">Loejee Miguel L. Dulaugon
                                 </h1>
-                                <p>I am a flexible programmer learner capable of software engineering, game development and web development. 
+                                <p class="lg:text-[15px] lg:text-left text-center">I am a flexible programmer learner capable of software engineering, game development and web development. 
                                     With tools such as Flutter, Godot Engine and Svelte
                                 </p>
-                                <div class="grid grid-cols-3 gap-3"><button type="button" class="btn variant-filled !bg-primary-500 !text-white">My Resume
-                                    </button>
+                                <div class="grid grid-cols-3 gap-1 lg:gap-3"><button type="button" class="btn variant-filled !bg-primary-500 !text-white text-[13px] lg:text-[16px]">My Resume
+                                </button>
                                     ${each(jumps, (jump) => {
     return `<div>${validate_component(JumpButton, "JumpButton").$$render($$result, { jumpTo: jump.id }, {}, {
       default: () => {
@@ -44,7 +52,7 @@ const TitleCard = create_ssr_component(($$result, $$props, $$bindings, slots) =>
     })}
                                         </div>`;
   })}</div></div>
-                            <img class="object-cover h-96 w-96 rounded-full"${add_attribute("src", myFace, 0)} alt="My Face"></div></div></div></div>` : ``}
+                            <img class="object-cover lg:h-96 lg:w-96 h-64 w-64 rounded-full self-center"${add_attribute("src", myFace, 0)} alt="My Face"></div></div></div></div>` : ``}
 </div>`;
 });
 const PortfolioViewer = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -83,16 +91,24 @@ const ArrowDown = create_ssr_component(($$result, $$props, $$bindings, slots) =>
     $$bindings.class(className);
   return `<svg${add_attribute("viewBox", viewBox, 0)}${add_attribute("width", width, 0)}${add_attribute("height", height, 0)}${add_attribute("class", className, 0)}${add_attribute("aria-label", ariaLabel, 0)}${add_attribute("aria-hidden", ariaHidden, 0)}>${desc ? `<desc>${escape(desc)}</desc>` : ``}${title ? `<title>${escape(title)}</title>` : ``}<path d="M11,4H13V16L18.5,10.5L19.92,11.92L12,19.84L4.08,11.92L5.5,10.5L11,16V4Z"${add_attribute("fill", color, 0)}></path></svg>`;
 });
+const PortfolioContent_svelte_svelte_type_style_lang = "";
+const css$3 = {
+  code: ".bio.svelte-1v9ttgl{display:grid;grid-template-rows:auto auto;justify-content:start}",
+  map: null
+};
 const PortfolioContent = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let { imagesAtRight = true } = $$props;
+  let isLargeScreen = false;
   if ($$props.imagesAtRight === void 0 && $$bindings.imagesAtRight && imagesAtRight !== void 0)
     $$bindings.imagesAtRight(imagesAtRight);
-  return `<div class="flex flex-col min-h-[34rem] justify-center content-center"><button class="btn">${validate_component(ArrowUp, "ArrowUp").$$render($$result, { size: "2rem" }, {}, {})}</button>
-    <div class="lg:max-h-[34rem] overflow-hidden"><div class="grid lg:grid-cols-2 gap-3 justify-items-center overflow-hidden">${imagesAtRight == false ? `${slots.images ? slots.images({}) : ``}` : ``}
-            <div class="grid grid-rows-2 gap-2">${slots.bio ? slots.bio({}) : ``}
-                <div class="grid lg:grid-cols-2 gap-2">${slots.actions ? slots.actions({}) : ``}</div></div>
-            ${imagesAtRight == true ? `${slots.images ? slots.images({}) : ``}` : ``}</div></div>
-    <button class="btn">${validate_component(ArrowDown, "ArrowDown").$$render($$result, { size: "2rem" }, {}, {})}</button></div>`;
+  $$result.css.add(css$3);
+  return `<div class="flex flex-col lg:min-h-[34rem] justify-center content-center"><button class="btn">${validate_component(ArrowUp, "ArrowUp").$$render($$result, { size: "2rem" }, {}, {})}</button>
+    <div class="overflow-hidden"><div class="grid lg:grid-cols-2 gap-3 justify-items-center overflow-hidden">${imagesAtRight == false || isLargeScreen == false ? `${slots.images ? slots.images({}) : ``}` : ``}
+            <div class="bio gap-2 svelte-1v9ttgl">${slots.bio ? slots.bio({}) : ``}
+                <div class="grid grid-rows-2 gap-3">${slots.actions ? slots.actions({}) : ``}</div></div>
+            ${imagesAtRight == true && isLargeScreen == true ? `${slots.images ? slots.images({}) : ``}` : ``}</div></div>
+    <button class="btn">${validate_component(ArrowDown, "ArrowDown").$$render($$result, { size: "2rem" }, {}, {})}</button>
+</div>`;
 });
 class ImageSource {
   src;
@@ -169,8 +185,8 @@ const PortfolioContentBio = create_ssr_component(($$result, $$props, $$bindings,
   let { displayLogos } = $$props;
   if ($$props.displayLogos === void 0 && $$bindings.displayLogos && displayLogos !== void 0)
     $$bindings.displayLogos(displayLogos);
-  return `<div class="flex flex-col gap-y-5 w-96 justify-start content-start"><h1 class="h2 font-bold">${slots.title ? slots.title({}) : ``}</h1>
-    <div class="grid gap-2 justify-start grid-cols-3 overflow-visible grid-flow-dense ">${each(displayLogos, (logo) => {
+  return `<div class="flex flex-col gap-y-5 lg:w-[30rem] w-72 justify-start content-start"><h1 class="h2 font-bold lg:text-[2rem] h-fit">${slots.title ? slots.title({}) : ``}</h1>
+    <div class="grid gap-2 justify-start grid-cols-3 overflow-visible grid-flow-dense">${each(displayLogos, (logo) => {
     return `${logos.has(logo) ? `${validate_component(LogoButton, "LogoButton").$$render(
       $$result,
       {
@@ -182,7 +198,7 @@ const PortfolioContentBio = create_ssr_component(($$result, $$props, $$bindings,
       {}
     )}` : ``}`;
   })}</div>
-    <div class="text-1xl">${slots.body ? slots.body({}) : ``}</div></div>`;
+    <div class="lg:text-xl text-[12px]">${slots.body ? slots.body({}) : ``}</div></div>`;
 });
 const ArrowLeft = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let { size = "1em" } = $$props;
@@ -257,7 +273,7 @@ const PortfolioContentImageCarousel = create_ssr_component(($$result, $$props, $
   });
   if ($$props.imageSources === void 0 && $$bindings.imageSources && imageSources !== void 0)
     $$bindings.imageSources(imageSources);
-  return `<div class="card p-4 grid grid-cols-[auto_1fr_auto] items-center w-[25rem] object-contain">
+  return `<div class="card p-4 grid grid-cols-[auto_1fr_auto] items-center lg:w-[25rem] object-contain">
 	<button type="button" class="btn-icon variant-filled">${validate_component(ArrowLeft, "ArrowLeft").$$render($$result, {}, {}, {})}</button>
 	 
 	<div class="snap-x snap-mandatory scroll-smooth flex overflow-x-auto"${add_attribute("this", elemCarousel, 0)}>${each(imageSources, (imageSource) => {
@@ -379,20 +395,14 @@ const musicPlayerImages = [
     "Add To Playlist"
   )
 ];
-const BlueFeel = "/_app/immutable/assets/blue_feel.82deaedd.png";
 const About_svelte_svelte_type_style_lang = "";
 const css$1 = {
-  code: '.blue-feel.svelte-13ibx9w{background-image:url("../../assets/images/background/blue_feel.png") !important}',
+  code: ".blue-feel.svelte-88uy98{background-image:url('../../assets/images/background/blue_feel.png') !important}",
   map: null
 };
 const About = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   $$result.css.add(css$1);
-  {
-    {
-      console.log(BlueFeel);
-    }
-  }
-  return `<div class="h-screen"><div id="about" class="blue-feel flex h-screen items-center justify-center relative z-[1] svelte-13ibx9w">${``}</div>
+  return `<div class="h-screen"><div id="about" class="blue-feel flex h-screen items-center justify-center relative z-[1] svelte-88uy98">${``}</div>
 </div>`;
 });
 const Contacts = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -497,27 +507,26 @@ function spring(value, opts = {}) {
 }
 const _page_svelte_svelte_type_style_lang = "";
 const css = {
-  code: ".circle-glow.svelte-arunz{height:70rem;width:70rem;background:radial-gradient(circle at 50% 50%, rgba(44, 61, 169, 0.43) 0%, rgba(255, 255, 255, 0) 100%);transform:translate(-50%,-50%)}.vignette.svelte-arunz{pointer-events:none;background:radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0) 59%, rgba(0, 0, 0, 0.05) 75%, rgba(0, 0, 0, 0.1) 86%, rgba(0, 0, 0, 0.45) 100%)}",
+  code: ".vignette.svelte-12pvids{pointer-events:none;background:radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0) 59%, rgba(0, 0, 0, 0.05) 75%, rgba(0, 0, 0, 0.1) 86%, rgba(0, 0, 0, 0.45) 100%)}",
   map: null
 };
 const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  let $coords, $$unsubscribe_coords;
+  let $appShellController, $$unsubscribe_appShellController;
+  $$unsubscribe_appShellController = subscribe(appShellController, (value) => $appShellController = value);
   let curPortfolioIndex;
-  let scrollY;
   currentPortfolioIndex.subscribe((value) => {
     curPortfolioIndex = value;
   });
-  let coords = spring({ x: 50, y: 50 }, { stiffness: 0.1, damping: 0.25 });
-  $$unsubscribe_coords = subscribe(coords, (value) => $coords = value);
+  spring({ x: 50, y: 50 }, { stiffness: 0.1, damping: 0.25 });
   spring(10);
   $$result.css.add(css);
-  $$unsubscribe_coords();
-  return `<circle${add_attribute("cx", $coords.x, 0)}${add_attribute("cy", $coords.y, 0)} class="circle-glow fixed z-[10] rounded-full svelte-arunz"></circle>
+  $$unsubscribe_appShellController();
+  return `
 
-<div class="vignette fixed w-screen h-screen z-20 svelte-arunz"></div>
+<div class="vignette fixed w-screen h-screen z-20 svelte-12pvids"></div>
 
-<div class="h-screen overflow-scroll">${validate_component(TitleCard, "TitleCard").$$render($$result, { scrollY }, {}, {})}
-	<div class="relative z-10"><div class="h-auto py-24 px-20 bg-surface-500 flex items-center justify-center rounded-3xl" id="works-container"><div class="px-[10rem]">${validate_component(PortfolioViewer, "PortfolioViewer").$$render($$result, {}, {}, {
+<div>${validate_component(TitleCard, "TitleCard").$$render($$result, { scrollY: $appShellController }, {}, {})}
+	<div class="relative z-10"><div class="min-h-screen py-24 px-20 bg-surface-500 flex items-center justify-center rounded-3xl" id="works-container"><div class="px-[10rem]">${validate_component(PortfolioViewer, "PortfolioViewer").$$render($$result, {}, {}, {
     default: () => {
       return `${curPortfolioIndex == PortfolioItems.MUSIC_PLAYER ? `${validate_component(PortfolioContent, "PortfolioContent").$$render($$result, {}, {}, {
         images: () => {
@@ -561,7 +570,9 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
             },
             {},
             {}
-          )}</div>`;
+          )}
+								<a class="btn variant-filled" href="https://github.com/GuyWithBag/morse_code_torch" target="_blank"><img class="h-5"${add_attribute("src", logos.get("GithubMark")?.src, 0)}${add_attribute("alt", logos.get("GithubMark")?.alt, 0)}>
+									<span>Github</span></a></div>`;
         },
         bio: () => {
           return `<div slot="bio">${validate_component(PortfolioContentBio, "PortfolioContentBio").$$render(

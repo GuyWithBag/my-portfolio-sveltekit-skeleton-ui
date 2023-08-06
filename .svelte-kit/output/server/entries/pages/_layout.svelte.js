@@ -185,11 +185,12 @@ const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   headerVisible.subscribe((value) => {
     visible = value;
   });
+  let isLargeScreen = false;
   return `
-<body style="overflow-x-hidden"><div style="display: contents" class="h-full overflow-hidden">${validate_component(AppShell, "AppShell").$$render($$result, {}, {}, {
+${validate_component(AppShell, "AppShell").$$render($$result, {}, {}, {
     header: () => {
-      return `${visible ? `
-					<div>${validate_component(AppBar, "AppBar").$$render($$result, {}, {}, {
+      return `${visible && isLargeScreen == true ? `
+			<div>${validate_component(AppBar, "AppBar").$$render($$result, {}, {}, {
         trail: () => {
           return `${validate_component(JumpButton, "JumpButton").$$render(
             $$result,
@@ -204,7 +205,7 @@ const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
               }
             }
           )}
-								${each(jumps, (jump) => {
+						${each(jumps, (jump) => {
             return `${validate_component(JumpButton, "JumpButton").$$render(
               $$result,
               {
@@ -219,19 +220,19 @@ const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
               }
             )}`;
           })}
-							`;
+					`;
         },
         lead: () => {
           return `<strong class="text-xl uppercase">Loejee Miguel L. Dulaugon&#39;s Portfolio</strong>`;
         }
       })}</div>` : ``}
-			`;
+	`;
     },
     default: () => {
       return `
-			${slots.default ? slots.default({}) : ``}`;
+	${slots.default ? slots.default({}) : ``}`;
     }
-  })}</div></body>`;
+  })}`;
 });
 export {
   Layout as default

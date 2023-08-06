@@ -14,7 +14,7 @@ const jumps = [
   new Jump("contacts", "Contacts")
 ];
 const JumpButton = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  let { style = "btn variant-filled" } = $$props;
+  let { style = "btn variant-filled text-[13px] lg:text-[16px]" } = $$props;
   let { jumpTo } = $$props;
   if ($$props.style === void 0 && $$bindings.style && style !== void 0)
     $$bindings.style(style);
