@@ -42,8 +42,8 @@ const TitleCard = create_ssr_component(($$result, $$props, $$bindings, slots) =>
                                 <p class="lg:text-[15px] lg:text-left text-center">I am a flexible programmer learner capable of software engineering, game development and web development. 
                                     With tools such as Flutter, Godot Engine and Svelte
                                 </p>
-                                <div class="grid grid-cols-3 gap-1 lg:gap-3"><button type="button" class="btn variant-filled !bg-primary-500 !text-white text-[13px] lg:text-[16px]">My Resume
-                                </button>
+                                <div class="grid grid-cols-3 gap-1 lg:gap-3"><a href="/downloads/LoejeeMiguel_Dulaugon_Resume.pdf" class="btn variant-filled !bg-primary-500 !text-white text-[13px] lg:text-[16px]" download>My Resume
+                                    </a>
                                     ${each(jumps, (jump) => {
     return `<div>${validate_component(JumpButton, "JumpButton").$$render($$result, { jumpTo: jump.id }, {}, {
       default: () => {
