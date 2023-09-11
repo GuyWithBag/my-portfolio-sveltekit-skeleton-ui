@@ -43,7 +43,7 @@
             <hr />
             <div class="grid grid-cols-4">
                 <a href="https://github.com/GuyWithBag" class="btn lg:text-2xl" target="_blank">GitHub</a>
-                <a href="loejeemigueldulaugon@gmail.com" class="btn lg:text-2xl" target="_blank">Email</a>
+                <a href="mailto:loejeemigueldulaugon@gmail.com" class="btn lg:text-2xl" target="_blank">Email</a>
                 <!-- <a href="" class="btn text-2xl">Playstore</a> -->
                 <a href="https://www.linkedin.com/in/loejee-miguel-dulaugon-805480284/" class="btn lg:text-2xl" target="_blank">LinkedIn</a>
                 <!-- <a href="" class="btn text-2xl">UpWork</a> -->

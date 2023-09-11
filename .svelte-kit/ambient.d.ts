@@ -48,8 +48,6 @@ declare module '$env/static/private' {
 	export const LANG: string;
 	export const LOCALAPPDATA: string;
 	export const LOGONSERVER: string;
-	export const LUA_DEV: string;
-	export const LUA_PATH: string;
 	export const NODE: string;
 	export const NODE_ENV: string;
 	export const NODE_EXE: string;
@@ -164,8 +162,6 @@ declare module '$env/dynamic/private' {
 		LANG: string;
 		LOCALAPPDATA: string;
 		LOGONSERVER: string;
-		LUA_DEV: string;
-		LUA_PATH: string;
 		NODE: string;
 		NODE_ENV: string;
 		NODE_EXE: string;

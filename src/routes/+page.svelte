@@ -121,7 +121,7 @@
 								</PortfolioContentBio>
 							</div>
 							<div slot="actions">
-								<GooglePlayButton href="https://github.com/GuyWithBag"/>
+								<GooglePlayButton href="https://play.google.com/store/apps/details?id=org.MacchiMatchaProductions.ChainReactionAtomRevampedSupreme"/>
 							</div>
 							<div slot="images">
 								<PortfolioContentImages imageSources={chainReactionImages}/>
