@@ -119,7 +119,7 @@
 					{:else if curPortfolioIndex == PortfolioItems.TO_DO_APP}
 						<PortfolioContent imagesDirection={ImagesDirection.TOP}>
 							<div slot="bio">
-								<PortfolioContentBio displayLogos={["React", "TypeScript", "Firebase", "Zustand", "Formik"]}>
+								<PortfolioContentBio displayLogos={["React", "TypeScript", "Firebase", "Zustand", "Formik", "ChakraUI"]}>
 									<span slot="title">To Do App</span>
 									<p slot="body">
 										Created a to do app integrated with google's firebase database, formik, and zustand. <br>
