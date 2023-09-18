@@ -64,7 +64,7 @@
                                     Loejee Miguel L. Dulaugon
                                 </h1>
                                 <p class="lg:text-[15px] lg:text-left text-center" transition:fly={{ x: -250, duration: generalDuration, delay: spaceBgFade + 500}}>
-                                    I am a flexible programmer learner capable of software engineering, game development and web development. 
+                                    I am a flexible programmer learner capable of learning and adapating very fast, game development and web development. 
                                     With tools such as Flutter, Godot Engine and Svelte
                                 </p>
                                 <div class="grid grid-cols-3 gap-1 lg:gap-3">

@@ -5,6 +5,7 @@ export enum PortfolioItems {
     MUSIC_PLAYER, 
     MORSE_CODE_TORCH, 
     CHAIN_REACTION_ATOM, 
+    TO_DO_APP, 
 }
 
 export let previousPortfolioIndex: number; 
