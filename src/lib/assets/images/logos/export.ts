@@ -5,6 +5,11 @@ import Dart from "$lib/assets/images/logos/dart.svg";
 import HiveDB from "$lib/assets/images/logos/hiveDB.png"; 
 import GoogleAdMob from "$lib/assets/images/logos/googleAdMob.svg"; 
 import GithubMark from "$lib/assets/images/logos/githubMark.svg";  
+import React from '$lib/assets/images/logos/react.svg' 
+import Firebase from '$lib/assets/images/logos/firebase.svg'
+import Zustand from '$lib/assets/images/logos/react-zustand.png'
+import Formik from '$lib/assets/images/logos/formik.svg'
+import TypeScriptIcon from '$lib/assets/images/logos/typescript.svg'
 
 export const logos: Map<String, ImageSource> = new Map<String, ImageSource>(Object.entries({
         Godot: new ImageSource(
@@ -42,6 +47,31 @@ export const logos: Map<String, ImageSource> = new Map<String, ImageSource>(Obje
             "GithubMark Icon", 
             "GithubMark" 
         ), 
-
+        React: new ImageSource(
+            React, 
+            "React Icon", 
+            "React"
+        ), 
+        Firebase: new ImageSource(
+            Firebase, 
+            "Firebase Icon", 
+            "Firebase" 
+        ), 
+        Formik: new ImageSource(
+            Formik, 
+            "Formik Icon", 
+            "Formik"
+        ), 
+        Zustand: new ImageSource(
+            Zustand, 
+            "Zustand Icon", 
+            "Zustand"
+        ), 
+        TypeScript: new ImageSource(
+            TypeScriptIcon, 
+            "TypeScript Icon", 
+            "TypeScript" 
+        )
     })
 )
+

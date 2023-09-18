@@ -8,6 +8,7 @@
 	import { fly } from "svelte/transition";
 
     export let imageSources: ImageSource[] = []; 
+	export let style: string = ""
 
 	const clamp = (num: number, min: number, max: number) => Math.min(Math.max(num, min), max);
 
@@ -40,7 +41,7 @@
 
 <div 
 	in:fly={{y: -200 * flyDirection}}
-	class="card p-4 grid grid-cols-[auto_1fr_auto] items-center lg:w-[25rem] object-contain"
+	class="card p-4 grid grid-cols-[auto_1fr_auto] items-center object-contain {style}"
 >
 	<!-- Button: Left -->
 	<button type="button" class="btn-icon variant-filled" on:click={carouselLeft}>

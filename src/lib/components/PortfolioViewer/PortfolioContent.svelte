@@ -1,10 +1,10 @@
 <script lang="ts">
-	import { currentPortfolioIndex } from '$lib/controllers/portfolioController';
+	import { ImagesDirection, currentPortfolioIndex } from '$lib/controllers/portfolioController';
     import ArrowDown from 'svelte-material-icons/ArrowDown.svelte'; 
     import ArrowUp from 'svelte-material-icons/ArrowUp.svelte'; 
-	import { onMount } from 'svelte';
+	import { onMount } from 'svelte'; 
 
-    export let imagesAtRight: boolean = true; 
+    export let imagesDirection: ImagesDirection = ImagesDirection.RIGHT; 
 
     let isLargeScreen: boolean = false; 
 
@@ -20,8 +20,8 @@
         <ArrowUp size="2rem"/>
     </button>
     <div class="overflow-hidden">
-        <div class="grid lg:grid-cols-2 gap-3 justify-items-center overflow-hidden">
-            {#if imagesAtRight == false || isLargeScreen == false}
+        <div class="grid {imagesDirection == ImagesDirection.TOP ? '' : 'lg:grid-cols-2'} gap-3 justify-items-center overflow-hidden">
+            {#if imagesDirection == ImagesDirection.RIGHT || isLargeScreen == false || imagesDirection == ImagesDirection.TOP}
                 <slot name="images" /> 
             {/if}
             <div class="bio gap-2"> 
@@ -30,7 +30,7 @@
                     <slot name="actions" />
                 </div> 
             </div>
-            {#if imagesAtRight == true && isLargeScreen == true} 
+            {#if imagesDirection == ImagesDirection.LEFT && isLargeScreen == true} 
                 <slot name="images" /> 
             {/if}
         </div>

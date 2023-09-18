@@ -13,6 +13,9 @@
 	import Contacts from "$lib/components/Contacts/Contacts.svelte";
 	import { spring } from 'svelte/motion';
 	import { logos } from "$lib/assets/images/logos/export.ts"; 
+	import GithubButton from "$lib/components/GithubButton.svelte";
+	import { toDoAppImages } from "$lib/assets/images/portfolioImages/toDoApp/export";
+	import { ImagesDirection } from "$lib/controllers/portfolioController";
 
 	let curPortfolioIndex: number; 
 
@@ -64,14 +67,7 @@
 								</PortfolioContentBio>
 							</div>
 							<div slot="actions">
-								<a class="btn variant-filled" href="https://github.com/GuyWithBag/my_music_player" target="_blank">
-									<img 
-										class="h-5"
-										src={logos.get("GithubMark")?.src} 
-										alt={logos.get("GithubMark")?.alt} 
-									/>
-									<span>Github</span>
-								</a>
+								<GithubButton href="https://github.com/GuyWithBag/my_music_player"/>
 							</div>
 							<div slot="images">
 								<PortfolioContentImages imageSources={musicPlayerImages}/>
@@ -94,21 +90,14 @@
 							</div>
 							<div slot="actions">
 								<GooglePlayButton href="https://play.google.com/store/apps/details?id=org.MacchiMatchaProductions.morse_code_torch"/>
-								<a class="btn variant-filled" href="https://github.com/GuyWithBag/morse_code_torch" target="_blank">
-									<img 
-										class="h-5"
-										src={logos.get("GithubMark")?.src} 
-										alt={logos.get("GithubMark")?.alt} 
-									/>
-									<span>Github</span>
-								</a>
+								<GithubButton href="https://github.com/GuyWithBag/morse_code_torch" />
 							</div>
 							<div slot="images">
 								<PortfolioContentImages imageSources={morseCodeTorchImages}/>
 							</div>
 						</PortfolioContent>
 					{:else if curPortfolioIndex == PortfolioItems.CHAIN_REACTION_ATOM}
-						<PortfolioContent imagesAtRight={false}>
+						<PortfolioContent imagesDirection={ImagesDirection.LEFT}>
 							<div slot="bio">
 								<PortfolioContentBio displayLogos={["Godot", "GDScript", "GoogleAdMob"]}>
 									<span slot="title">Chain Reaction: Atom Supreme Revamped</span>
@@ -125,6 +114,30 @@
 							</div>
 							<div slot="images">
 								<PortfolioContentImages imageSources={chainReactionImages}/>
+							</div>
+						</PortfolioContent>
+					{:else if curPortfolioIndex == PortfolioItems.TO_DO_APP}
+						<PortfolioContent imagesDirection={ImagesDirection.TOP}>
+							<div slot="bio">
+								<PortfolioContentBio displayLogos={["React", "TypeScript", "Firebase", "Zustand", "Formik"]}>
+									<span slot="title">To Do App</span>
+									<p slot="body">
+										Created a to do app integrated with google's firebase database, formik, and zustand. <br>
+										<br>
+										Features: <br>
+										- Create your own tasks. <br>
+										- Delete tasks and see them on your recently deleted. <br>
+										- Restore your deleted task. <br> 
+										- Tasks persists with google's online database, firebase. 
+									</p>
+								</PortfolioContentBio>
+							</div>
+							<div slot="actions">
+								<GooglePlayButton href="https://play.google.com/store/apps/details?id=org.MacchiMatchaProductions.ChainReactionAtomRevampedSupreme"/>
+								<GithubButton href="https://github.com/GuyWithBag/my-to-do-app"/>
+							</div>
+							<div slot="images">
+								<PortfolioContentImages imageSources={toDoAppImages} style={"lg:w-[40rem] w-[30rem]"}/>
 							</div>
 						</PortfolioContent>
 					{/if}

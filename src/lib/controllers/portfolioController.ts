@@ -8,6 +8,12 @@ export enum PortfolioItems {
     TO_DO_APP, 
 }
 
+export enum ImagesDirection {
+    TOP, 
+    LEFT, 
+    RIGHT
+}
+
 export let previousPortfolioIndex: number; 
 
 function createStore () {
