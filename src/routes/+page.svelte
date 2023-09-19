@@ -133,11 +133,10 @@
 								</PortfolioContentBio>
 							</div>
 							<div slot="actions">
-								<GooglePlayButton href="https://play.google.com/store/apps/details?id=org.MacchiMatchaProductions.ChainReactionAtomRevampedSupreme"/>
 								<GithubButton href="https://github.com/GuyWithBag/my-to-do-app"/>
 							</div>
 							<div slot="images">
-								<PortfolioContentImages imageSources={toDoAppImages} style={"lg:w-[40rem] w-[30rem]"}/>
+								<PortfolioContentImages imageSources={toDoAppImages} style={"lg:w-[40rem] w-[27rem]"}/>
 							</div>
 						</PortfolioContent>
 					{/if}
