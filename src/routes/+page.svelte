@@ -93,7 +93,10 @@
 								<GithubButton href="https://github.com/GuyWithBag/morse_code_torch" />
 							</div>
 							<div slot="images">
-								<PortfolioContentImages imageSources={morseCodeTorchImages}/>
+								<PortfolioContentImages 
+									imageSources={morseCodeTorchImages}
+									href="https://play.google.com/store/apps/details?id=org.MacchiMatchaProductions.morse_code_torch"
+								/>
 							</div>
 						</PortfolioContent>
 					{:else if curPortfolioIndex == PortfolioItems.CHAIN_REACTION_ATOM}
@@ -113,7 +116,10 @@
 								<GooglePlayButton href="https://play.google.com/store/apps/details?id=org.MacchiMatchaProductions.ChainReactionAtomRevampedSupreme"/>
 							</div>
 							<div slot="images">
-								<PortfolioContentImages imageSources={chainReactionImages}/>
+								<PortfolioContentImages 
+									imageSources={chainReactionImages}
+									href="https://play.google.com/store/apps/details?id=org.MacchiMatchaProductions.ChainReactionAtomRevampedSupreme"
+								/>
 							</div>
 						</PortfolioContent>
 					{:else if curPortfolioIndex == PortfolioItems.TO_DO_APP}
@@ -134,9 +140,14 @@
 							</div>
 							<div slot="actions">
 								<GithubButton href="https://github.com/GuyWithBag/my-to-do-app"/>
+								<a href="https://first-react-ts-5yzff2q9k-guywithbag.vercel.app/" class="btn variant-filled">Visit Website</a>
 							</div>
 							<div slot="images">
-								<PortfolioContentImages imageSources={toDoAppImages} style={"lg:w-[40rem] w-[27rem]"}/>
+								<PortfolioContentImages 
+									imageSources={toDoAppImages} 
+									style={"lg:w-[40rem] w-[27rem]"}
+									href="https://first-react-ts-5yzff2q9k-guywithbag.vercel.app/"
+								/>
 							</div>
 						</PortfolioContent>
 					{/if}

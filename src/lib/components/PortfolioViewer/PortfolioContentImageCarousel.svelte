@@ -9,6 +9,7 @@
 
     export let imageSources: ImageSource[] = []; 
 	export let style: string = ""
+	export let href: string = ""
 
 	const clamp = (num: number, min: number, max: number) => Math.min(Math.max(num, min), max);
 
@@ -43,23 +44,26 @@
 	in:fly={{y: -200 * flyDirection}}
 	class="card p-4 grid grid-cols-[auto_1fr_auto] items-center object-contain {style}"
 >
-	<!-- Button: Left -->
-	<button type="button" class="btn-icon variant-filled" on:click={carouselLeft}>
-		<ArrowLeft />
-	</button>
-	<!-- Full Images --> 
-	<div bind:this={elemCarousel} class="snap-x snap-mandatory scroll-smooth flex overflow-x-auto">
-		{#each imageSources as imageSource}
-			<img
-				class="snap-center w-auto rounded-container-token object-contain p-1"
-				src={imageSource.src}
-				alt={imageSource.alt}
-				loading="lazy"
-			/> 
-		{/each} 
-	</div>
-	<!-- Button: Right -->
-	<button type="button" class="btn-icon variant-filled" on:click={carouselRight}>
-		<ArrowRight />
-	</button>
+		<!-- Button: Left -->
+		<button type="button" class="btn-icon variant-filled" on:click={carouselLeft}>
+			<ArrowLeft />
+		</button>
+
+		<!-- Full Images --> 
+		<a href={href} target="_blank">
+			<div bind:this={elemCarousel} class="snap-x snap-mandatory scroll-smooth flex overflow-x-auto">
+				{#each imageSources as imageSource}
+					<img
+						class="snap-center w-auto rounded-container-token object-contain p-1"
+						src={imageSource.src}
+						alt={imageSource.alt}
+						loading="lazy"
+					/> 
+				{/each} 
+			</div>
+		</a>
+		<!-- Button: Right -->
+		<button type="button" class="btn-icon variant-filled" on:click={carouselRight}>
+			<ArrowRight />
+		</button>
 </div>
