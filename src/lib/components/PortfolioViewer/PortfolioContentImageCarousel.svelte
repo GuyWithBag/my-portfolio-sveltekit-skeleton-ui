@@ -54,7 +54,7 @@
 			<div bind:this={elemCarousel} class="snap-x snap-mandatory scroll-smooth flex overflow-x-auto">
 				{#each imageSources as imageSource}
 					<img
-						class="snap-center w-auto rounded-container-token object-contain p-1"
+						class="snap-center w-auto rounded-container-token object-contain p-1 max-h-[30rem]"
 						src={imageSource.src}
 						alt={imageSource.alt}
 						loading="lazy"

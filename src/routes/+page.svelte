@@ -16,6 +16,7 @@
 	import GithubButton from "$lib/components/GithubButton.svelte";
 	import { toDoAppImages } from "$lib/assets/images/portfolioImages/toDoApp/export";
 	import { ImagesDirection } from "$lib/controllers/portfolioController";
+	import { eCommerceAppImages } from "$lib/assets/images/portfolioImages/eCommerceApp/export";
 
 	let curPortfolioIndex: number; 
 
@@ -49,10 +50,40 @@
 >
 	<TitleCard scrollY={$appShellController}/>
 	<div class="relative z-10">
-		<div  class="min-h-screen py-24 px-20 bg-surface-500 flex items-center justify-center rounded-3xl" id="works-container">
+		<div  class="min-h-screen py-24 px-[3rem] bg-surface-500 flex items-center justify-center rounded-3xl" id="works-container">
 			<div class="px-[10rem]">
 				<PortfolioViewer>
-					{#if curPortfolioIndex == PortfolioItems.MUSIC_PLAYER}
+					{#if curPortfolioIndex == PortfolioItems.MOSTLY_STATIC_RESPONSIVE_E_COMMERCE}
+					<PortfolioContent imagesDirection={ImagesDirection.TOP}>
+						<div slot="bio">
+							<PortfolioContentBio displayLogos={["React", "TypeScript", "Firebase", "Zustand", "Formik", "ChakraUI"]}>
+								<span slot="title">Mostly Static Responsive E-Commerce Website With Functionalities</span>
+								<p slot="body">
+									Created a functional E-Commerce website that looks and functions similar to a real E-Commerce website.. <br>
+									<br>
+									Features: <br>
+									- Add an item to cart (With their amount you want to add). <br>
+									- You can add an item to your wishlist. <br>
+									- You can view your shopping cart. <br> 
+									- State management is stored in the URL so you can share it with your friends!  <br>
+									- You can share the link to that product with your friends! 
+									- Animated banner
+								</p>
+							</PortfolioContentBio>
+						</div>
+						<div slot="actions">
+							<GithubButton href="https://github.com/GuyWithBag/my-to-do-app"/>
+							<a href="https://first-react-ts-5yzff2q9k-guywithbag.vercel.app/" class="btn variant-filled">Visit Website</a>
+						</div>
+						<div slot="images">
+							<PortfolioContentImages 
+								imageSources={eCommerceAppImages} 
+								style={"lg:w-[40rem] w-[27rem]"}
+								href="https://first-react-ts-5yzff2q9k-guywithbag.vercel.app/"
+							/>
+						</div>
+					</PortfolioContent>
+					{:else if curPortfolioIndex == PortfolioItems.MUSIC_PLAYER}
 						<PortfolioContent>
 							<div slot="bio">
 								<PortfolioContentBio displayLogos={["Flutter", "Dart", "HiveDB"]}>

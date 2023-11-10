@@ -9,12 +9,12 @@
 
     function onWheel(event: WheelEvent) {
         // document.getElementById("works")!.scrollIntoView({behavior: "smooth"}); 
-        preventDefault(event); 
-        if(0 > event.deltaY){
-            currentPortfolioIndex.back();
-        } else {
-            currentPortfolioIndex.next(); 
-        }
+        // preventDefault(event); 
+        // if(0 > event.deltaY){
+        //     currentPortfolioIndex.back();
+        // } else {
+        //     currentPortfolioIndex.next(); 
+        // }
     }
     // left: 37, up: 38, right: 39, down: 40,
     // spacebar: 32, pageup: 33, pagedown: 34, end: 35, home: 36

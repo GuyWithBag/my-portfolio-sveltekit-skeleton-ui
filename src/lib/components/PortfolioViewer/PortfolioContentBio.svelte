@@ -26,7 +26,7 @@
             {/if}
         {/each}
     </div>
-    <div class=" lg:text-xl text-[12px]" in:typewriter={{delay: headerWriteDuration, duration: 2000}}>
+    <div class=" lg:text-xl text-[12px] h-72 overflow-auto" in:typewriter={{delay: headerWriteDuration, duration: 2000}}>
         <slot name="body"/>
     </div>
 </div>

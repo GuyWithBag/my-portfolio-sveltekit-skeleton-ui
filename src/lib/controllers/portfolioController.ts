@@ -6,6 +6,7 @@ export enum PortfolioItems {
     MORSE_CODE_TORCH, 
     CHAIN_REACTION_ATOM, 
     TO_DO_APP, 
+    MOSTLY_STATIC_RESPONSIVE_E_COMMERCE
 }
 
 export enum ImagesDirection {

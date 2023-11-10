@@ -1,5 +1,7 @@
 <script lang="ts">
 	import { ImagesDirection, currentPortfolioIndex } from '$lib/controllers/portfolioController';
+    import ArrowRight from 'svelte-material-icons/ArrowRight.svelte'; 
+    import ArrowLeft from 'svelte-material-icons/ArrowLeft.svelte'; 
     import ArrowDown from 'svelte-material-icons/ArrowDown.svelte'; 
     import ArrowUp from 'svelte-material-icons/ArrowUp.svelte'; 
 	import { onMount } from 'svelte'; 
@@ -15,9 +17,12 @@
 
 </script>
 
-<div class="flex flex-col lg:min-h-[34rem] justify-center content-center">
-    <button on:click={currentPortfolioIndex.back} class="btn">
+<div class="flex max-sm:flex-col flex-row lg:min-h-[34rem] justify-center content-center">
+    <button on:click={currentPortfolioIndex.back} class="btn max-sm:flex hidden">
         <ArrowUp size="2rem"/>
+    </button>
+    <button on:click={currentPortfolioIndex.back} class="btn max-sm:hidden">
+        <ArrowLeft size="2rem"/>
     </button>
     <div class="overflow-hidden">
         <div class="grid {imagesDirection == ImagesDirection.TOP ? '' : 'lg:grid-cols-2'} gap-3 justify-items-center overflow-hidden">
@@ -35,8 +40,11 @@
             {/if}
         </div>
     </div>
-    <button on:click={currentPortfolioIndex.next} class="btn">
+    <button on:click={currentPortfolioIndex.back} class="btn max-sm:flex hidden">
         <ArrowDown size="2rem"/>
+    </button>
+    <button on:click={currentPortfolioIndex.next} class="btn max-sm:hidden">
+        <ArrowRight size="2rem"/>
     </button>
 </div>
 
