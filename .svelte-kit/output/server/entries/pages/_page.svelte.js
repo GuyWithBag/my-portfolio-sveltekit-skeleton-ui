@@ -1,5 +1,5 @@
 import { c as create_ssr_component, i as add_styles, d as each, v as validate_component, e as escape, a as add_attribute, n as now, l as loop, h as subscribe } from "../../chunks/index2.js";
-import { J as JumpButton, j as jumps, A as ArrowUp, c as currentPortfolioIndex, P as PortfolioItems } from "../../chunks/ArrowUp.js";
+import { J as JumpButton, j as jumps, I as ImagesDirection, A as ArrowUp, c as currentPortfolioIndex, P as PortfolioItems } from "../../chunks/ArrowUp.js";
 import { w as writable } from "../../chunks/index.js";
 function createStore$1() {
   const { subscribe: subscribe2, set } = writable(false);
@@ -39,7 +39,7 @@ const TitleCard = create_ssr_component(($$result, $$props, $$bindings, slots) =>
     "transform": `translate3d(0, ${scrollY * parallaxSpeed}px, 0)`
   })}><div class="h-screen flex items-center justify-center"><div class="grid lg:grid-cols-2 gap-x-8 ga-y-1 place-items-center lg:w-[50rem] w-[19rem]"><div class="flex flex-col lg:gap-y-5 gap-1"><h1 class="h1 font-bold lg:text-left text-center">Loejee Miguel L. Dulaugon
                                 </h1>
-                                <p class="lg:text-[15px] lg:text-left text-center">I am a flexible programmer learner capable of software engineering, game development and web development. 
+                                <p class="lg:text-[15px] lg:text-left text-center">I am a flexible programmer learner capable of learning and adapating very fast, game development and web development. 
                                     With tools such as Flutter, Godot Engine and Svelte
                                 </p>
                                 <div class="grid grid-cols-3 gap-1 lg:gap-3"><a href="/downloads/LoejeeMiguel_Dulaugon_Resume.pdf" class="btn variant-filled !bg-primary-500 !text-white text-[13px] lg:text-[16px]" download>My Resume
@@ -57,6 +57,72 @@ const TitleCard = create_ssr_component(($$result, $$props, $$bindings, slots) =>
 });
 const PortfolioViewer = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `${``}`;
+});
+const ArrowRight = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  let { size = "1em" } = $$props;
+  let { width = size } = $$props;
+  let { height = size } = $$props;
+  let { color = "currentColor" } = $$props;
+  let { viewBox = "0 0 24 24" } = $$props;
+  let { ariaLabel = void 0 } = $$props;
+  let { ariaHidden = void 0 } = $$props;
+  let { title = void 0 } = $$props;
+  let { desc = void 0 } = $$props;
+  let { class: className = void 0 } = $$props;
+  if ($$props.size === void 0 && $$bindings.size && size !== void 0)
+    $$bindings.size(size);
+  if ($$props.width === void 0 && $$bindings.width && width !== void 0)
+    $$bindings.width(width);
+  if ($$props.height === void 0 && $$bindings.height && height !== void 0)
+    $$bindings.height(height);
+  if ($$props.color === void 0 && $$bindings.color && color !== void 0)
+    $$bindings.color(color);
+  if ($$props.viewBox === void 0 && $$bindings.viewBox && viewBox !== void 0)
+    $$bindings.viewBox(viewBox);
+  if ($$props.ariaLabel === void 0 && $$bindings.ariaLabel && ariaLabel !== void 0)
+    $$bindings.ariaLabel(ariaLabel);
+  if ($$props.ariaHidden === void 0 && $$bindings.ariaHidden && ariaHidden !== void 0)
+    $$bindings.ariaHidden(ariaHidden);
+  if ($$props.title === void 0 && $$bindings.title && title !== void 0)
+    $$bindings.title(title);
+  if ($$props.desc === void 0 && $$bindings.desc && desc !== void 0)
+    $$bindings.desc(desc);
+  if ($$props.class === void 0 && $$bindings.class && className !== void 0)
+    $$bindings.class(className);
+  return `<svg${add_attribute("viewBox", viewBox, 0)}${add_attribute("width", width, 0)}${add_attribute("height", height, 0)}${add_attribute("class", className, 0)}${add_attribute("aria-label", ariaLabel, 0)}${add_attribute("aria-hidden", ariaHidden, 0)}>${desc ? `<desc>${escape(desc)}</desc>` : ``}${title ? `<title>${escape(title)}</title>` : ``}<path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z"${add_attribute("fill", color, 0)}></path></svg>`;
+});
+const ArrowLeft = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  let { size = "1em" } = $$props;
+  let { width = size } = $$props;
+  let { height = size } = $$props;
+  let { color = "currentColor" } = $$props;
+  let { viewBox = "0 0 24 24" } = $$props;
+  let { ariaLabel = void 0 } = $$props;
+  let { ariaHidden = void 0 } = $$props;
+  let { title = void 0 } = $$props;
+  let { desc = void 0 } = $$props;
+  let { class: className = void 0 } = $$props;
+  if ($$props.size === void 0 && $$bindings.size && size !== void 0)
+    $$bindings.size(size);
+  if ($$props.width === void 0 && $$bindings.width && width !== void 0)
+    $$bindings.width(width);
+  if ($$props.height === void 0 && $$bindings.height && height !== void 0)
+    $$bindings.height(height);
+  if ($$props.color === void 0 && $$bindings.color && color !== void 0)
+    $$bindings.color(color);
+  if ($$props.viewBox === void 0 && $$bindings.viewBox && viewBox !== void 0)
+    $$bindings.viewBox(viewBox);
+  if ($$props.ariaLabel === void 0 && $$bindings.ariaLabel && ariaLabel !== void 0)
+    $$bindings.ariaLabel(ariaLabel);
+  if ($$props.ariaHidden === void 0 && $$bindings.ariaHidden && ariaHidden !== void 0)
+    $$bindings.ariaHidden(ariaHidden);
+  if ($$props.title === void 0 && $$bindings.title && title !== void 0)
+    $$bindings.title(title);
+  if ($$props.desc === void 0 && $$bindings.desc && desc !== void 0)
+    $$bindings.desc(desc);
+  if ($$props.class === void 0 && $$bindings.class && className !== void 0)
+    $$bindings.class(className);
+  return `<svg${add_attribute("viewBox", viewBox, 0)}${add_attribute("width", width, 0)}${add_attribute("height", height, 0)}${add_attribute("class", className, 0)}${add_attribute("aria-label", ariaLabel, 0)}${add_attribute("aria-hidden", ariaHidden, 0)}>${desc ? `<desc>${escape(desc)}</desc>` : ``}${title ? `<title>${escape(title)}</title>` : ``}<path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z"${add_attribute("fill", color, 0)}></path></svg>`;
 });
 const ArrowDown = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let { size = "1em" } = $$props;
@@ -97,17 +163,22 @@ const css$3 = {
   map: null
 };
 const PortfolioContent = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  let { imagesAtRight = true } = $$props;
+  let { imagesDirection = ImagesDirection.RIGHT } = $$props;
   let isLargeScreen = false;
-  if ($$props.imagesAtRight === void 0 && $$bindings.imagesAtRight && imagesAtRight !== void 0)
-    $$bindings.imagesAtRight(imagesAtRight);
+  if ($$props.imagesDirection === void 0 && $$bindings.imagesDirection && imagesDirection !== void 0)
+    $$bindings.imagesDirection(imagesDirection);
   $$result.css.add(css$3);
-  return `<div class="flex flex-col lg:min-h-[34rem] justify-center content-center"><button class="btn">${validate_component(ArrowUp, "ArrowUp").$$render($$result, { size: "2rem" }, {}, {})}</button>
-    <div class="overflow-hidden"><div class="grid lg:grid-cols-2 gap-3 justify-items-center overflow-hidden">${imagesAtRight == false || isLargeScreen == false ? `${slots.images ? slots.images({}) : ``}` : ``}
+  return `<div class="flex max-sm:flex-col flex-row lg:min-h-[34rem] justify-center content-center"><button class="btn max-sm:flex hidden">${validate_component(ArrowUp, "ArrowUp").$$render($$result, { size: "2rem" }, {}, {})}</button>
+    <button class="btn max-sm:hidden">${validate_component(ArrowLeft, "ArrowLeft").$$render($$result, { size: "2rem" }, {}, {})}</button>
+    <div class="overflow-hidden"><div class="${"grid " + escape(
+    imagesDirection == ImagesDirection.TOP ? "" : "lg:grid-cols-2",
+    true
+  ) + " gap-3 justify-items-center overflow-hidden"}">${imagesDirection == ImagesDirection.RIGHT || isLargeScreen == false || imagesDirection == ImagesDirection.TOP ? `${slots.images ? slots.images({}) : ``}` : ``}
             <div class="bio gap-2 svelte-1v9ttgl">${slots.bio ? slots.bio({}) : ``}
                 <div class="grid grid-rows-2 gap-3">${slots.actions ? slots.actions({}) : ``}</div></div>
-            ${imagesAtRight == true && isLargeScreen == true ? `${slots.images ? slots.images({}) : ``}` : ``}</div></div>
-    <button class="btn">${validate_component(ArrowDown, "ArrowDown").$$render($$result, { size: "2rem" }, {}, {})}</button>
+            ${imagesDirection == ImagesDirection.LEFT && isLargeScreen == true ? `${slots.images ? slots.images({}) : ``}` : ``}</div></div>
+    <button class="btn max-sm:flex hidden">${validate_component(ArrowDown, "ArrowDown").$$render($$result, { size: "2rem" }, {}, {})}</button>
+    <button class="btn max-sm:hidden">${validate_component(ArrowRight, "ArrowRight").$$render($$result, { size: "2rem" }, {}, {})}</button>
 </div>`;
 });
 class ImageSource {
@@ -126,6 +197,13 @@ const Dart = "/_app/immutable/assets/dart.bd089d39.svg";
 const HiveDB = "/_app/immutable/assets/hiveDB.e2c0e2ee.png";
 const GoogleAdMob = "/_app/immutable/assets/googleAdMob.d468cd80.svg";
 const GithubMark = "/_app/immutable/assets/githubMark.7a0dd11e.svg";
+const React = "/_app/immutable/assets/react.f2cadfd0.svg";
+const Firebase = "/_app/immutable/assets/firebase.21cda531.svg";
+const Zustand = "/_app/immutable/assets/react-zustand.c8c78b7d.png";
+const Formik = "/_app/immutable/assets/formik.106b835e.svg";
+const TypeScriptIcon = "/_app/immutable/assets/typescript.336a54a4.svg";
+const ChakraUI = "/_app/immutable/assets/chakra-ui.d44d871f.svg";
+const TailWind = "/_app/immutable/assets/tailwind.7c29d970.svg";
 const logos = new Map(
   Object.entries({
     Godot: new ImageSource(
@@ -162,6 +240,41 @@ const logos = new Map(
       GithubMark,
       "GithubMark Icon",
       "GithubMark"
+    ),
+    React: new ImageSource(
+      React,
+      "React Icon",
+      "React"
+    ),
+    Firebase: new ImageSource(
+      Firebase,
+      "Firebase Icon",
+      "Firebase"
+    ),
+    Formik: new ImageSource(
+      Formik,
+      "Formik Icon",
+      "Formik"
+    ),
+    Zustand: new ImageSource(
+      Zustand,
+      "Zustand Icon",
+      "Zustand"
+    ),
+    TypeScript: new ImageSource(
+      TypeScriptIcon,
+      "TypeScript Icon",
+      "TypeScript"
+    ),
+    ChakraUI: new ImageSource(
+      ChakraUI,
+      "ChakraUI Icon",
+      "ChakraUI"
+    ),
+    TailWind: new ImageSource(
+      TailWind,
+      "TailWind Icon",
+      "TailWind"
     )
   })
 );
@@ -178,7 +291,7 @@ const LogoButton = create_ssr_component(($$result, $$props, $$bindings, slots) =
     $$bindings.label(label);
   if ($$props.href === void 0 && $$bindings.href && href !== void 0)
     $$bindings.href(href);
-  return `<a${add_attribute("href", href, 0)} class="btn variant-filled h-6" target="_blank"><img class="h-7 w-7 py-1 object-scale-down"${add_attribute("src", logo, 0)}${add_attribute("alt", alt, 0)}>
+  return `<a${add_attribute("href", href, 0)} class="btn variant-filled h-6 text-[13px]" target="_blank"><img class="h-7 w-7 py-1 object-scale-down"${add_attribute("src", logo, 0)}${add_attribute("alt", alt, 0)}>
     <span>${escape(label)}</span></a>`;
 });
 const PortfolioContentBio = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -198,89 +311,30 @@ const PortfolioContentBio = create_ssr_component(($$result, $$props, $$bindings,
       {}
     )}` : ``}`;
   })}</div>
-    <div class="lg:text-xl text-[12px]">${slots.body ? slots.body({}) : ``}</div></div>`;
-});
-const ArrowLeft = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  let { size = "1em" } = $$props;
-  let { width = size } = $$props;
-  let { height = size } = $$props;
-  let { color = "currentColor" } = $$props;
-  let { viewBox = "0 0 24 24" } = $$props;
-  let { ariaLabel = void 0 } = $$props;
-  let { ariaHidden = void 0 } = $$props;
-  let { title = void 0 } = $$props;
-  let { desc = void 0 } = $$props;
-  let { class: className = void 0 } = $$props;
-  if ($$props.size === void 0 && $$bindings.size && size !== void 0)
-    $$bindings.size(size);
-  if ($$props.width === void 0 && $$bindings.width && width !== void 0)
-    $$bindings.width(width);
-  if ($$props.height === void 0 && $$bindings.height && height !== void 0)
-    $$bindings.height(height);
-  if ($$props.color === void 0 && $$bindings.color && color !== void 0)
-    $$bindings.color(color);
-  if ($$props.viewBox === void 0 && $$bindings.viewBox && viewBox !== void 0)
-    $$bindings.viewBox(viewBox);
-  if ($$props.ariaLabel === void 0 && $$bindings.ariaLabel && ariaLabel !== void 0)
-    $$bindings.ariaLabel(ariaLabel);
-  if ($$props.ariaHidden === void 0 && $$bindings.ariaHidden && ariaHidden !== void 0)
-    $$bindings.ariaHidden(ariaHidden);
-  if ($$props.title === void 0 && $$bindings.title && title !== void 0)
-    $$bindings.title(title);
-  if ($$props.desc === void 0 && $$bindings.desc && desc !== void 0)
-    $$bindings.desc(desc);
-  if ($$props.class === void 0 && $$bindings.class && className !== void 0)
-    $$bindings.class(className);
-  return `<svg${add_attribute("viewBox", viewBox, 0)}${add_attribute("width", width, 0)}${add_attribute("height", height, 0)}${add_attribute("class", className, 0)}${add_attribute("aria-label", ariaLabel, 0)}${add_attribute("aria-hidden", ariaHidden, 0)}>${desc ? `<desc>${escape(desc)}</desc>` : ``}${title ? `<title>${escape(title)}</title>` : ``}<path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z"${add_attribute("fill", color, 0)}></path></svg>`;
-});
-const ArrowRight = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  let { size = "1em" } = $$props;
-  let { width = size } = $$props;
-  let { height = size } = $$props;
-  let { color = "currentColor" } = $$props;
-  let { viewBox = "0 0 24 24" } = $$props;
-  let { ariaLabel = void 0 } = $$props;
-  let { ariaHidden = void 0 } = $$props;
-  let { title = void 0 } = $$props;
-  let { desc = void 0 } = $$props;
-  let { class: className = void 0 } = $$props;
-  if ($$props.size === void 0 && $$bindings.size && size !== void 0)
-    $$bindings.size(size);
-  if ($$props.width === void 0 && $$bindings.width && width !== void 0)
-    $$bindings.width(width);
-  if ($$props.height === void 0 && $$bindings.height && height !== void 0)
-    $$bindings.height(height);
-  if ($$props.color === void 0 && $$bindings.color && color !== void 0)
-    $$bindings.color(color);
-  if ($$props.viewBox === void 0 && $$bindings.viewBox && viewBox !== void 0)
-    $$bindings.viewBox(viewBox);
-  if ($$props.ariaLabel === void 0 && $$bindings.ariaLabel && ariaLabel !== void 0)
-    $$bindings.ariaLabel(ariaLabel);
-  if ($$props.ariaHidden === void 0 && $$bindings.ariaHidden && ariaHidden !== void 0)
-    $$bindings.ariaHidden(ariaHidden);
-  if ($$props.title === void 0 && $$bindings.title && title !== void 0)
-    $$bindings.title(title);
-  if ($$props.desc === void 0 && $$bindings.desc && desc !== void 0)
-    $$bindings.desc(desc);
-  if ($$props.class === void 0 && $$bindings.class && className !== void 0)
-    $$bindings.class(className);
-  return `<svg${add_attribute("viewBox", viewBox, 0)}${add_attribute("width", width, 0)}${add_attribute("height", height, 0)}${add_attribute("class", className, 0)}${add_attribute("aria-label", ariaLabel, 0)}${add_attribute("aria-hidden", ariaHidden, 0)}>${desc ? `<desc>${escape(desc)}</desc>` : ``}${title ? `<title>${escape(title)}</title>` : ``}<path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z"${add_attribute("fill", color, 0)}></path></svg>`;
+    <div class="lg:text-xl text-[12px] h-72 overflow-auto">${slots.body ? slots.body({}) : ``}</div></div>`;
 });
 const PortfolioContentImageCarousel = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let { imageSources = [] } = $$props;
+  let { style = "" } = $$props;
+  let { href = "" } = $$props;
   let elemCarousel;
   currentPortfolioIndex.subscribe((value) => {
   });
   if ($$props.imageSources === void 0 && $$bindings.imageSources && imageSources !== void 0)
     $$bindings.imageSources(imageSources);
-  return `<div class="card p-4 grid grid-cols-[auto_1fr_auto] items-center lg:w-[25rem] object-contain">
-	<button type="button" class="btn-icon variant-filled">${validate_component(ArrowLeft, "ArrowLeft").$$render($$result, {}, {}, {})}</button>
-	 
-	<div class="snap-x snap-mandatory scroll-smooth flex overflow-x-auto"${add_attribute("this", elemCarousel, 0)}>${each(imageSources, (imageSource) => {
-    return `<img class="snap-center w-auto rounded-container-token object-contain p-1"${add_attribute("src", imageSource.src, 0)}${add_attribute("alt", imageSource.alt, 0)} loading="lazy">`;
-  })}</div>
-	
-	<button type="button" class="btn-icon variant-filled">${validate_component(ArrowRight, "ArrowRight").$$render($$result, {}, {}, {})}</button></div>`;
+  if ($$props.style === void 0 && $$bindings.style && style !== void 0)
+    $$bindings.style(style);
+  if ($$props.href === void 0 && $$bindings.href && href !== void 0)
+    $$bindings.href(href);
+  return `<div class="${"card p-4 grid grid-cols-[auto_1fr_auto] items-center object-contain " + escape(style, true)}">
+		<button type="button" class="btn-icon variant-filled">${validate_component(ArrowLeft, "ArrowLeft").$$render($$result, {}, {}, {})}</button>
+
+		 
+		<a${add_attribute("href", href, 0)} target="_blank"><div class="snap-x snap-mandatory scroll-smooth flex overflow-x-auto"${add_attribute("this", elemCarousel, 0)}>${each(imageSources, (imageSource) => {
+    return `<img class="snap-center w-auto rounded-container-token object-contain p-1 max-h-[30rem]"${add_attribute("src", imageSource.src, 0)}${add_attribute("alt", imageSource.alt, 0)} loading="lazy">`;
+  })}</div></a>
+		
+		<button type="button" class="btn-icon variant-filled">${validate_component(ArrowRight, "ArrowRight").$$render($$result, {}, {}, {})}</button></div>`;
 });
 const MainMenu = "/_app/immutable/assets/main_menu.b0b18c75.png";
 const GamePlay = "/_app/immutable/assets/gameplay.09caacb1.png";
@@ -319,13 +373,13 @@ const chainReactionImages = [
     "Victory Screen"
   )
 ];
-const HomePage = "/_app/immutable/assets/home_page.ed323009.png";
+const HomePage$1 = "/_app/immutable/assets/home_page.ed323009.png";
 const MorseCodeWrite = "/_app/immutable/assets/morse_code_write.f1969033.png";
 const SaveHistory = "/_app/immutable/assets/save_history.13f683f4.png";
 const Save = "/_app/immutable/assets/save.a9138f14.png";
 const morseCodeTorchImages = [
   new ImageSource(
-    HomePage,
+    HomePage$1,
     "Home Page"
   ),
   new ImageSource(
@@ -505,6 +559,62 @@ function spring(value, opts = {}) {
   };
   return spring2;
 }
+const GithubButton = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  let { href } = $$props;
+  if ($$props.href === void 0 && $$bindings.href && href !== void 0)
+    $$bindings.href(href);
+  return `<a class="btn variant-filled"${add_attribute("href", href, 0)} target="_blank"><img class="h-5"${add_attribute("src", logos.get("GithubMark")?.src, 0)}${add_attribute("alt", logos.get("GithubMark")?.alt, 0)}>
+    <span>Github</span></a>`;
+});
+const createATask = "/_app/immutable/assets/createATask.0a5f6c1d.png";
+const recentlyDeleted = "/_app/immutable/assets/recentlyDeleted.55f4c7c3.png";
+const tasks = "/_app/immutable/assets/tasks.c266e084.png";
+const toDoAppImages = [
+  new ImageSource(
+    createATask,
+    "Create a task"
+  ),
+  new ImageSource(
+    recentlyDeleted,
+    "Recently Deleted"
+  ),
+  new ImageSource(
+    tasks,
+    "Tasks"
+  )
+];
+const HomePage = "/_app/immutable/assets/home_page.c7a50fb2.png";
+const HomePage2 = "/_app/immutable/assets/home_page_2.2a163f7a.png";
+const HomePageDarkMode = "/_app/immutable/assets/home_page_dark_mode.7b9b6e3d.png";
+const WishList = "/_app/immutable/assets/wish_list.253a2c34.png";
+const ShoppingCart = "/_app/immutable/assets/shopping_cart.e469dfaf.png";
+const ProductPage = "/_app/immutable/assets/product_page.e8a82512.png";
+const eCommerceAppImages = [
+  new ImageSource(
+    HomePage,
+    "Home Page"
+  ),
+  new ImageSource(
+    HomePage2,
+    "Home Page 2"
+  ),
+  new ImageSource(
+    HomePageDarkMode,
+    "Home Page Dark Mode"
+  ),
+  new ImageSource(
+    WishList,
+    "Wish List"
+  ),
+  new ImageSource(
+    ShoppingCart,
+    "Shopping Cart"
+  ),
+  new ImageSource(
+    ProductPage,
+    "Product Page"
+  )
+];
 const _page_svelte_svelte_type_style_lang = "";
 const css = {
   code: ".vignette.svelte-12pvids{pointer-events:none;background:radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0) 59%, rgba(0, 0, 0, 0.05) 75%, rgba(0, 0, 0, 0.1) 86%, rgba(0, 0, 0, 0.45) 100%)}",
@@ -526,15 +636,71 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
 <div class="vignette fixed w-screen h-screen z-20 svelte-12pvids"></div>
 
 <div>${validate_component(TitleCard, "TitleCard").$$render($$result, { scrollY: $appShellController }, {}, {})}
-	<div class="relative z-10"><div class="min-h-screen py-24 px-20 bg-surface-500 flex items-center justify-center rounded-3xl" id="works-container"><div class="px-[10rem]">${validate_component(PortfolioViewer, "PortfolioViewer").$$render($$result, {}, {}, {
+	<div class="relative z-10"><div class="min-h-screen py-24 px-[3rem] bg-surface-500 flex items-center justify-center rounded-3xl" id="works-container"><div class="px-[10rem]">${validate_component(PortfolioViewer, "PortfolioViewer").$$render($$result, {}, {}, {
     default: () => {
-      return `${curPortfolioIndex == PortfolioItems.MUSIC_PLAYER ? `${validate_component(PortfolioContent, "PortfolioContent").$$render($$result, {}, {}, {
+      return `${curPortfolioIndex == PortfolioItems.MOSTLY_STATIC_RESPONSIVE_E_COMMERCE ? `${validate_component(PortfolioContent, "PortfolioContent").$$render($$result, { imagesDirection: ImagesDirection.TOP }, {}, {
+        images: () => {
+          return `<div slot="images">${validate_component(PortfolioContentImageCarousel, "PortfolioContentImages").$$render(
+            $$result,
+            {
+              imageSources: eCommerceAppImages,
+              style: "lg:w-[40rem] w-[27rem]",
+              href: "https://e-commerce-app-flame.vercel.app/"
+            },
+            {},
+            {}
+          )}</div>`;
+        },
+        actions: () => {
+          return `<div slot="actions">${validate_component(GithubButton, "GithubButton").$$render(
+            $$result,
+            {
+              href: "https://github.com/GuyWithBag/my-to-do-app"
+            },
+            {},
+            {}
+          )}
+							<a href="https://e-commerce-app-flame.vercel.app/" class="btn variant-filled">Visit Website</a></div>`;
+        },
+        bio: () => {
+          return `<div slot="bio">${validate_component(PortfolioContentBio, "PortfolioContentBio").$$render(
+            $$result,
+            {
+              displayLogos: ["React", "TypeScript", "Zustand", "ChakraUI", "TailWind"]
+            },
+            {},
+            {
+              body: () => {
+                return `<p slot="body">Created a functional E-Commerce website that looks and functions similar to a real E-Commerce website.. <br>
+									<br>
+									Features: <br>
+									- Add an item to cart (With their amount you want to add). <br>
+									- You can add an item to your wishlist. <br>
+									- You can view your shopping cart. <br> 
+									- State management is stored in the URL so you can share it with your friends!  <br>
+									- You can share the link to that product with your friends! 
+									- Animated banner
+								</p>`;
+              },
+              title: () => {
+                return `<span slot="title">Mostly Static Responsive E-Commerce Website With Functionalities</span>`;
+              }
+            }
+          )}</div>`;
+        }
+      })}` : `${curPortfolioIndex == PortfolioItems.MUSIC_PLAYER ? `${validate_component(PortfolioContent, "PortfolioContent").$$render($$result, {}, {}, {
         images: () => {
           return `<div slot="images">${validate_component(PortfolioContentImageCarousel, "PortfolioContentImages").$$render($$result, { imageSources: musicPlayerImages }, {}, {})}</div>`;
         },
         actions: () => {
-          return `<div slot="actions"><a class="btn variant-filled" href="https://github.com/GuyWithBag/my_music_player" target="_blank"><img class="h-5"${add_attribute("src", logos.get("GithubMark")?.src, 0)}${add_attribute("alt", logos.get("GithubMark")?.alt, 0)}>
-									<span>Github</span></a></div>`;
+          return `<div slot="actions">${validate_component(GithubButton, "GithubButton").$$render(
+            $$result,
+            {
+              href: "https://github.com/GuyWithBag/my_music_player"
+            },
+            {},
+            {}
+          )}</div>`;
         },
         bio: () => {
           return `<div slot="bio">${validate_component(PortfolioContentBio, "PortfolioContentBio").$$render(
@@ -560,7 +726,15 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
         }
       })}` : `${curPortfolioIndex == PortfolioItems.MORSE_CODE_TORCH ? `${validate_component(PortfolioContent, "PortfolioContent").$$render($$result, {}, {}, {
         images: () => {
-          return `<div slot="images">${validate_component(PortfolioContentImageCarousel, "PortfolioContentImages").$$render($$result, { imageSources: morseCodeTorchImages }, {}, {})}</div>`;
+          return `<div slot="images">${validate_component(PortfolioContentImageCarousel, "PortfolioContentImages").$$render(
+            $$result,
+            {
+              imageSources: morseCodeTorchImages,
+              href: "https://play.google.com/store/apps/details?id=org.MacchiMatchaProductions.morse_code_torch"
+            },
+            {},
+            {}
+          )}</div>`;
         },
         actions: () => {
           return `<div slot="actions">${validate_component(GooglePlayButton, "GooglePlayButton").$$render(
@@ -571,8 +745,14 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
             {},
             {}
           )}
-								<a class="btn variant-filled" href="https://github.com/GuyWithBag/morse_code_torch" target="_blank"><img class="h-5"${add_attribute("src", logos.get("GithubMark")?.src, 0)}${add_attribute("alt", logos.get("GithubMark")?.alt, 0)}>
-									<span>Github</span></a></div>`;
+								${validate_component(GithubButton, "GithubButton").$$render(
+            $$result,
+            {
+              href: "https://github.com/GuyWithBag/morse_code_torch"
+            },
+            {},
+            {}
+          )}</div>`;
         },
         bio: () => {
           return `<div slot="bio">${validate_component(PortfolioContentBio, "PortfolioContentBio").$$render(
@@ -596,12 +776,27 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
             }
           )}</div>`;
         }
-      })}` : `${curPortfolioIndex == PortfolioItems.CHAIN_REACTION_ATOM ? `${validate_component(PortfolioContent, "PortfolioContent").$$render($$result, { imagesAtRight: false }, {}, {
+      })}` : `${curPortfolioIndex == PortfolioItems.CHAIN_REACTION_ATOM ? `${validate_component(PortfolioContent, "PortfolioContent").$$render($$result, { imagesDirection: ImagesDirection.LEFT }, {}, {
         images: () => {
-          return `<div slot="images">${validate_component(PortfolioContentImageCarousel, "PortfolioContentImages").$$render($$result, { imageSources: chainReactionImages }, {}, {})}</div>`;
+          return `<div slot="images">${validate_component(PortfolioContentImageCarousel, "PortfolioContentImages").$$render(
+            $$result,
+            {
+              imageSources: chainReactionImages,
+              href: "https://play.google.com/store/apps/details?id=org.MacchiMatchaProductions.ChainReactionAtomRevampedSupreme"
+            },
+            {},
+            {}
+          )}</div>`;
         },
         actions: () => {
-          return `<div slot="actions">${validate_component(GooglePlayButton, "GooglePlayButton").$$render($$result, { href: "https://github.com/GuyWithBag" }, {}, {})}</div>`;
+          return `<div slot="actions">${validate_component(GooglePlayButton, "GooglePlayButton").$$render(
+            $$result,
+            {
+              href: "https://play.google.com/store/apps/details?id=org.MacchiMatchaProductions.ChainReactionAtomRevampedSupreme"
+            },
+            {},
+            {}
+          )}</div>`;
         },
         bio: () => {
           return `<div slot="bio">${validate_component(PortfolioContentBio, "PortfolioContentBio").$$render(
@@ -623,7 +818,62 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
             }
           )}</div>`;
         }
-      })}` : ``}`}`}`;
+      })}` : `${curPortfolioIndex == PortfolioItems.TO_DO_APP ? `${validate_component(PortfolioContent, "PortfolioContent").$$render($$result, { imagesDirection: ImagesDirection.TOP }, {}, {
+        images: () => {
+          return `<div slot="images">${validate_component(PortfolioContentImageCarousel, "PortfolioContentImages").$$render(
+            $$result,
+            {
+              imageSources: toDoAppImages,
+              style: "lg:w-[40rem] w-[27rem]",
+              href: "https://first-react-ts-5yzff2q9k-guywithbag.vercel.app/"
+            },
+            {},
+            {}
+          )}</div>`;
+        },
+        actions: () => {
+          return `<div slot="actions">${validate_component(GithubButton, "GithubButton").$$render(
+            $$result,
+            {
+              href: "https://github.com/GuyWithBag/my-to-do-app"
+            },
+            {},
+            {}
+          )}
+								<a href="https://first-react-ts-5yzff2q9k-guywithbag.vercel.app/" class="btn variant-filled">Visit Website</a></div>`;
+        },
+        bio: () => {
+          return `<div slot="bio">${validate_component(PortfolioContentBio, "PortfolioContentBio").$$render(
+            $$result,
+            {
+              displayLogos: [
+                "React",
+                "TypeScript",
+                "Firebase",
+                "Zustand",
+                "Formik",
+                "ChakraUI"
+              ]
+            },
+            {},
+            {
+              body: () => {
+                return `<p slot="body">Created a to do app integrated with google&#39;s firebase database, formik, and zustand. <br>
+										<br>
+										Features: <br>
+										- Create your own tasks. <br>
+										- Delete tasks and see them on your recently deleted. <br>
+										- Restore your deleted task. <br> 
+										- Tasks persists with google&#39;s online database, firebase. 
+									</p>`;
+              },
+              title: () => {
+                return `<span slot="title">To Do App</span>`;
+              }
+            }
+          )}</div>`;
+        }
+      })}` : ``}`}`}`}`}`;
     }
   })}</div></div>
 		${validate_component(About, "About").$$render($$result, {}, {}, {})}

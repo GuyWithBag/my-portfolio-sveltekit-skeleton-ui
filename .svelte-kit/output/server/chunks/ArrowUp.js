@@ -27,8 +27,16 @@ var PortfolioItems = /* @__PURE__ */ ((PortfolioItems2) => {
   PortfolioItems2[PortfolioItems2["MUSIC_PLAYER"] = 0] = "MUSIC_PLAYER";
   PortfolioItems2[PortfolioItems2["MORSE_CODE_TORCH"] = 1] = "MORSE_CODE_TORCH";
   PortfolioItems2[PortfolioItems2["CHAIN_REACTION_ATOM"] = 2] = "CHAIN_REACTION_ATOM";
+  PortfolioItems2[PortfolioItems2["TO_DO_APP"] = 3] = "TO_DO_APP";
+  PortfolioItems2[PortfolioItems2["MOSTLY_STATIC_RESPONSIVE_E_COMMERCE"] = 4] = "MOSTLY_STATIC_RESPONSIVE_E_COMMERCE";
   return PortfolioItems2;
 })(PortfolioItems || {});
+var ImagesDirection = /* @__PURE__ */ ((ImagesDirection2) => {
+  ImagesDirection2[ImagesDirection2["TOP"] = 0] = "TOP";
+  ImagesDirection2[ImagesDirection2["LEFT"] = 1] = "LEFT";
+  ImagesDirection2[ImagesDirection2["RIGHT"] = 2] = "RIGHT";
+  return ImagesDirection2;
+})(ImagesDirection || {});
 function createStore() {
   const { subscribe, set, update } = writable(0);
   let itemsLength = Object.keys(PortfolioItems).length / 2;
@@ -89,6 +97,7 @@ const ArrowUp = create_ssr_component(($$result, $$props, $$bindings, slots) => {
 });
 export {
   ArrowUp as A,
+  ImagesDirection as I,
   JumpButton as J,
   PortfolioItems as P,
   currentPortfolioIndex as c,

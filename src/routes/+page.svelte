@@ -56,7 +56,7 @@
 					{#if curPortfolioIndex == PortfolioItems.MOSTLY_STATIC_RESPONSIVE_E_COMMERCE}
 					<PortfolioContent imagesDirection={ImagesDirection.TOP}>
 						<div slot="bio">
-							<PortfolioContentBio displayLogos={["React", "TypeScript", "Firebase", "Zustand", "Formik", "ChakraUI"]}>
+							<PortfolioContentBio displayLogos={["React", "TypeScript", "Zustand", "ChakraUI", "TailWind"]}>
 								<span slot="title">Mostly Static Responsive E-Commerce Website With Functionalities</span>
 								<p slot="body">
 									Created a functional E-Commerce website that looks and functions similar to a real E-Commerce website.. <br>
@@ -73,13 +73,13 @@
 						</div>
 						<div slot="actions">
 							<GithubButton href="https://github.com/GuyWithBag/my-to-do-app"/>
-							<a href="https://first-react-ts-5yzff2q9k-guywithbag.vercel.app/" class="btn variant-filled">Visit Website</a>
+							<a href="https://e-commerce-app-flame.vercel.app/" class="btn variant-filled">Visit Website</a>
 						</div>
 						<div slot="images">
 							<PortfolioContentImages 
 								imageSources={eCommerceAppImages} 
 								style={"lg:w-[40rem] w-[27rem]"}
-								href="https://first-react-ts-5yzff2q9k-guywithbag.vercel.app/"
+								href="https://e-commerce-app-flame.vercel.app/"
 							/>
 						</div>
 					</PortfolioContent>
