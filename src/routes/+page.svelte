@@ -57,7 +57,7 @@
 					<PortfolioContent imagesDirection={ImagesDirection.TOP}>
 						<div slot="bio">
 							<PortfolioContentBio displayLogos={["React", "TypeScript", "Zustand", "ChakraUI", "TailWind"]}>
-								<span slot="title">Mostly Static Responsive E-Commerce Website With Functionalities</span>
+								<span slot="title">Responsive E-Commerce Website With Functionalities</span>
 								<p slot="body">
 									Created a functional E-Commerce website that looks and functions similar to a real E-Commerce website.. <br>
 									<br>
