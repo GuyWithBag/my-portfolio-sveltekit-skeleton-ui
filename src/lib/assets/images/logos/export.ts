@@ -12,6 +12,7 @@ import Formik from '$lib/assets/images/logos/formik.svg'
 import TypeScriptIcon from '$lib/assets/images/logos/typescript.svg'
 import ChakraUI from '$lib/assets/images/logos/chakra-ui.svg'
 import TailWind from '$lib/assets/images/logos/tailwind.svg'
+import Svelte from '$lib/assets/images/logos/svelte.svg'
 
 export const logos: Map<String, ImageSource> = new Map<String, ImageSource>(Object.entries({
         Godot: new ImageSource(
@@ -83,7 +84,12 @@ export const logos: Map<String, ImageSource> = new Map<String, ImageSource>(Obje
             TailWind, 
             "TailWind Icon", 
             "TailWind"
-        )
+        ), 
+        Svelte: new ImageSource(
+            Svelte, 
+            "Svelte Icon", 
+            "Svelte"
+        ), 
     })
 )
 

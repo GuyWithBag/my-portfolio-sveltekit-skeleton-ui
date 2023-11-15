@@ -2,11 +2,11 @@ import { writable } from 'svelte/store';
 
 
 export enum PortfolioItems {
+    MOSTLY_STATIC_RESPONSIVE_E_COMMERCE, 
     MUSIC_PLAYER, 
     MORSE_CODE_TORCH, 
     CHAIN_REACTION_ATOM, 
     TO_DO_APP, 
-    MOSTLY_STATIC_RESPONSIVE_E_COMMERCE
 }
 
 export enum ImagesDirection {

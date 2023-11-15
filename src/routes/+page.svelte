@@ -17,6 +17,7 @@
 	import { toDoAppImages } from "$lib/assets/images/portfolioImages/toDoApp/export";
 	import { ImagesDirection } from "$lib/controllers/portfolioController";
 	import { eCommerceAppImages } from "$lib/assets/images/portfolioImages/eCommerceApp/export";
+	import SkillsShowcase from "$lib/components/SkillsShowcase/SkillsShowcase.svelte";
 
 	let curPortfolioIndex: number; 
 
@@ -50,7 +51,12 @@
 >
 	<TitleCard scrollY={$appShellController}/>
 	<div class="relative z-10">
-		<div  class="min-h-screen py-24 px-[3rem] bg-surface-500 flex items-center justify-center rounded-3xl" id="works-container">
+		<div class="min-h-screen py-24 px-[3rem] bg-surface-500 flex items-center justify-center rounded-3xl" id="works-container">
+			<div class="px-[10rem]">
+				<SkillsShowcase />
+			</div>
+		</div>
+		<div class="min-h-screen py-24 px-[3rem] bg-surface-500 flex items-center justify-center rounded-3xl" id="works-container">
 			<div class="px-[10rem]">
 				<PortfolioViewer>
 					{#if curPortfolioIndex == PortfolioItems.MOSTLY_STATIC_RESPONSIVE_E_COMMERCE}
