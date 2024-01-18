@@ -9,11 +9,16 @@ import React from '$lib/assets/images/logos/react.svg'
 import Firebase from '$lib/assets/images/logos/firebase.svg'
 import Zustand from '$lib/assets/images/logos/react-zustand.png'
 import Formik from '$lib/assets/images/logos/formik.svg'
-import TypeScriptIcon from '$lib/assets/images/logos/typescript.svg'
+import TypeScript from '$lib/assets/images/logos/typescript.svg'
 import ChakraUI from '$lib/assets/images/logos/chakra-ui.svg'
 import TailWind from '$lib/assets/images/logos/tailwind.svg'
 import Svelte from '$lib/assets/images/logos/svelte.svg'
 import Next from '$lib/assets/images/logos/next-js.svg'
+import Javascript from '$lib/assets/images/logos/javascript.svg'
+import Python from '$lib/assets/images/logos/python.svg'
+import SQL from '$lib/assets/images/logos/sql.svg'
+import Java from '$lib/assets/images/logos/java.svg'
+import CSharp from '$lib/assets/images/logos/csharp.svg'
 
 export const logos: Map<String, ImageSource> = new Map<String, ImageSource>(Object.entries({
     Godot: new ImageSource(
@@ -72,7 +77,7 @@ export const logos: Map<String, ImageSource> = new Map<String, ImageSource>(Obje
         "Zustand"
     ),
     TypeScript: new ImageSource(
-        TypeScriptIcon,
+        TypeScript,
         "TypeScript Icon",
         "TypeScript"
     ),
@@ -95,6 +100,31 @@ export const logos: Map<String, ImageSource> = new Map<String, ImageSource>(Obje
         Next,
         "Next Icon",
         "Next"
+    ),
+    Javascript: new ImageSource(
+        Javascript,
+        "Javascript Icon",
+        "Javascriptt"
+    ),
+    Python: new ImageSource(
+        Python,
+        "Python Icon",
+        "Python"
+    ),
+    Java: new ImageSource(
+        Java,
+        "Java Icon",
+        "Java"
+    ),
+    SQL: new ImageSource(
+        SQL,
+        "SQL Icon",
+        "SQL"
+    ),
+    CSharp: new ImageSource(
+        CSharp,
+        "CSharp Icon",
+        "CSharp"
     ),
 })
 )

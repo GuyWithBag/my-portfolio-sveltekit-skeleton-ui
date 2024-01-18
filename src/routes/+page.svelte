@@ -57,12 +57,10 @@
 >
 	<TitleCard scrollY={$appShellController} />
 	<div class="relative z-10">
-		<div
-			class="min-h-screen py-24 px-[1rem] bg-surface-500 flex items-center justify-center rounded-3xl"
-			id="skills-container"
-		>
+		<div class="min-h-screen py-24 px-[1rem] bg-slate-800 rounded-3xl" id="skills-container">
 			<SkillsShowcase />
 		</div>
+		<div class=" h-14" />
 		<div
 			class="min-h-screen py-24 px-[3rem] bg-surface-500 flex items-center justify-center rounded-3xl"
 			id="works-container"
