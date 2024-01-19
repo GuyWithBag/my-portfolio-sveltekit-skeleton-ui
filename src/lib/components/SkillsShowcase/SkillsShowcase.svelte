@@ -51,7 +51,7 @@
 
 <div>
 	<div class="flex flex-col gap-3 justify-center items-center p-5">
-		<div class="flex flex-row gap-3">
+		<div class="flex flex-row gap-3 w-[95%] flex-wrap">
 			<SkillsTab
 				tab={getAllSkills()}
 				onClick={() => {
