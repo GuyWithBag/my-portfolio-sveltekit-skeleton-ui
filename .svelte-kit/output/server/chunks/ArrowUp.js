@@ -24,11 +24,11 @@ const JumpButton = create_ssr_component(($$result, $$props, $$bindings, slots) =
 <a><button type="button"${add_attribute("class", style, 0)}>${slots.default ? slots.default({}) : ``}</button></a>`;
 });
 var PortfolioItems = /* @__PURE__ */ ((PortfolioItems2) => {
-  PortfolioItems2[PortfolioItems2["MUSIC_PLAYER"] = 0] = "MUSIC_PLAYER";
-  PortfolioItems2[PortfolioItems2["MORSE_CODE_TORCH"] = 1] = "MORSE_CODE_TORCH";
-  PortfolioItems2[PortfolioItems2["CHAIN_REACTION_ATOM"] = 2] = "CHAIN_REACTION_ATOM";
-  PortfolioItems2[PortfolioItems2["TO_DO_APP"] = 3] = "TO_DO_APP";
-  PortfolioItems2[PortfolioItems2["MOSTLY_STATIC_RESPONSIVE_E_COMMERCE"] = 4] = "MOSTLY_STATIC_RESPONSIVE_E_COMMERCE";
+  PortfolioItems2[PortfolioItems2["MOSTLY_STATIC_RESPONSIVE_E_COMMERCE"] = 0] = "MOSTLY_STATIC_RESPONSIVE_E_COMMERCE";
+  PortfolioItems2[PortfolioItems2["MUSIC_PLAYER"] = 1] = "MUSIC_PLAYER";
+  PortfolioItems2[PortfolioItems2["MORSE_CODE_TORCH"] = 2] = "MORSE_CODE_TORCH";
+  PortfolioItems2[PortfolioItems2["CHAIN_REACTION_ATOM"] = 3] = "CHAIN_REACTION_ATOM";
+  PortfolioItems2[PortfolioItems2["TO_DO_APP"] = 4] = "TO_DO_APP";
   return PortfolioItems2;
 })(PortfolioItems || {});
 var ImagesDirection = /* @__PURE__ */ ((ImagesDirection2) => {

@@ -1,0 +1,375 @@
+{
+  ".svelte-kit/generated/client-optimized/app.js": {
+    "dynamicImports": [
+      ".svelte-kit/generated/client-optimized/nodes/0.js",
+      ".svelte-kit/generated/client-optimized/nodes/1.js",
+      ".svelte-kit/generated/client-optimized/nodes/2.js"
+    ],
+    "file": "_app/immutable/entry/app.3f52c907.js",
+    "imports": [
+      "_preload-helper.a4192956.js",
+      "_index.c2390a1b.js"
+    ],
+    "isEntry": true,
+    "src": ".svelte-kit/generated/client-optimized/app.js"
+  },
+  ".svelte-kit/generated/client-optimized/nodes/0.css": {
+    "file": "_app/immutable/assets/0.9ce0670c.css",
+    "src": ".svelte-kit/generated/client-optimized/nodes/0.css"
+  },
+  ".svelte-kit/generated/client-optimized/nodes/0.js": {
+    "css": [
+      "_app/immutable/assets/0.9ce0670c.css"
+    ],
+    "dynamicImports": [
+      "src/lib/domain/window.ts"
+    ],
+    "file": "_app/immutable/nodes/0.923742ef.js",
+    "imports": [
+      "_preload-helper.a4192956.js",
+      "_index.c2390a1b.js",
+      "_index.e78fc114.js",
+      "_ArrowUp.4bbfde67.js"
+    ],
+    "isDynamicEntry": true,
+    "isEntry": true,
+    "src": ".svelte-kit/generated/client-optimized/nodes/0.js"
+  },
+  ".svelte-kit/generated/client-optimized/nodes/1.js": {
+    "file": "_app/immutable/nodes/1.2a08f6d4.js",
+    "imports": [
+      "_index.c2390a1b.js",
+      "_singletons.c46f2305.js"
+    ],
+    "isDynamicEntry": true,
+    "isEntry": true,
+    "src": ".svelte-kit/generated/client-optimized/nodes/1.js"
+  },
+  ".svelte-kit/generated/client-optimized/nodes/2.css": {
+    "file": "_app/immutable/assets/2.d0fe3175.css",
+    "src": ".svelte-kit/generated/client-optimized/nodes/2.css"
+  },
+  ".svelte-kit/generated/client-optimized/nodes/2.js": {
+    "assets": [
+      "_app/immutable/assets/myFace.5373a17d.jpg",
+      "_app/immutable/assets/godot.d87f4cc3.svg",
+      "_app/immutable/assets/flutter.074a68fc.svg",
+      "_app/immutable/assets/dart.bd089d39.svg",
+      "_app/immutable/assets/hiveDB.e2c0e2ee.png",
+      "_app/immutable/assets/googleAdMob.d468cd80.svg",
+      "_app/immutable/assets/githubMark.7a0dd11e.svg",
+      "_app/immutable/assets/react.f2cadfd0.svg",
+      "_app/immutable/assets/firebase.21cda531.svg",
+      "_app/immutable/assets/react-zustand.c8c78b7d.png",
+      "_app/immutable/assets/formik.106b835e.svg",
+      "_app/immutable/assets/typescript.336a54a4.svg",
+      "_app/immutable/assets/chakra-ui.d44d871f.svg",
+      "_app/immutable/assets/tailwind.7c29d970.svg",
+      "_app/immutable/assets/svelte.dc8a06dc.svg",
+      "_app/immutable/assets/next-js.40f02dfc.svg",
+      "_app/immutable/assets/javascript.baa03265.svg",
+      "_app/immutable/assets/python.bbc5c606.svg",
+      "_app/immutable/assets/sql.33b3d862.svg",
+      "_app/immutable/assets/java.03ed5f2b.svg",
+      "_app/immutable/assets/csharp.718af05c.svg",
+      "_app/immutable/assets/main_menu.b0b18c75.png",
+      "_app/immutable/assets/gameplay.09caacb1.png",
+      "_app/immutable/assets/maps.17bd97a8.png",
+      "_app/immutable/assets/multiple_players_1.5ee0312b.png",
+      "_app/immutable/assets/maps_2.d327e941.png",
+      "_app/immutable/assets/multiple_players_2.0a3caca8.png",
+      "_app/immutable/assets/victory.8906a09a.png",
+      "_app/immutable/assets/home_page.ed323009.png",
+      "_app/immutable/assets/morse_code_write.f1969033.png",
+      "_app/immutable/assets/save_history.13f683f4.png",
+      "_app/immutable/assets/save.a9138f14.png",
+      "_app/immutable/assets/audio_player.8474e8dc.jpg",
+      "_app/immutable/assets/playlist_list.987a7107.jpg",
+      "_app/immutable/assets/playlist_page.f14fd11e.jpg",
+      "_app/immutable/assets/search_results.67751409.jpg",
+      "_app/immutable/assets/settings.72d8d8c3.jpg",
+      "_app/immutable/assets/song_list_drag.0aeb5712.jpg",
+      "_app/immutable/assets/song_more_options.deaad98b.jpg",
+      "_app/immutable/assets/add_to_playlist.9c823056.jpg",
+      "_app/immutable/assets/lulu.d2a4634f.gif",
+      "_app/immutable/assets/createATask.0a5f6c1d.png",
+      "_app/immutable/assets/recentlyDeleted.55f4c7c3.png",
+      "_app/immutable/assets/tasks.c266e084.png",
+      "_app/immutable/assets/home_page.c7a50fb2.png",
+      "_app/immutable/assets/home_page_2.2a163f7a.png",
+      "_app/immutable/assets/home_page_dark_mode.7b9b6e3d.png",
+      "_app/immutable/assets/wish_list.253a2c34.png",
+      "_app/immutable/assets/shopping_cart.e469dfaf.png",
+      "_app/immutable/assets/product_page.e8a82512.png",
+      "_app/immutable/assets/kai-pilger-space.da9de3ea.jpg",
+      "_app/immutable/assets/blue_feel.82deaedd.png"
+    ],
+    "css": [
+      "_app/immutable/assets/2.d0fe3175.css"
+    ],
+    "dynamicImports": [
+      "src/lib/domain/window.ts"
+    ],
+    "file": "_app/immutable/nodes/2.bf9ac5e4.js",
+    "imports": [
+      "_index.c2390a1b.js",
+      "_ArrowUp.4bbfde67.js",
+      "_index.e78fc114.js",
+      "_preload-helper.a4192956.js"
+    ],
+    "isDynamicEntry": true,
+    "isEntry": true,
+    "src": ".svelte-kit/generated/client-optimized/nodes/2.js"
+  },
+  "_ArrowUp.4bbfde67.js": {
+    "file": "_app/immutable/chunks/ArrowUp.4bbfde67.js",
+    "imports": [
+      "_index.c2390a1b.js",
+      "_index.e78fc114.js"
+    ]
+  },
+  "_index.c2390a1b.js": {
+    "file": "_app/immutable/chunks/index.c2390a1b.js"
+  },
+  "_index.e78fc114.js": {
+    "file": "_app/immutable/chunks/index.e78fc114.js",
+    "imports": [
+      "_index.c2390a1b.js"
+    ]
+  },
+  "_preload-helper.a4192956.js": {
+    "file": "_app/immutable/chunks/preload-helper.a4192956.js"
+  },
+  "_singletons.c46f2305.js": {
+    "file": "_app/immutable/chunks/singletons.c46f2305.js",
+    "imports": [
+      "_index.e78fc114.js"
+    ]
+  },
+  "node_modules/@sveltejs/kit/src/runtime/client/start.js": {
+    "file": "_app/immutable/entry/start.d086c142.js",
+    "imports": [
+      "_index.c2390a1b.js",
+      "_singletons.c46f2305.js"
+    ],
+    "isEntry": true,
+    "src": "node_modules/@sveltejs/kit/src/runtime/client/start.js"
+  },
+  "src/lib/assets/gifs/lulu.gif": {
+    "file": "_app/immutable/assets/lulu.d2a4634f.gif",
+    "src": "src/lib/assets/gifs/lulu.gif"
+  },
+  "src/lib/assets/images/background/blue_feel.png": {
+    "file": "_app/immutable/assets/blue_feel.82deaedd.png",
+    "src": "src/lib/assets/images/background/blue_feel.png"
+  },
+  "src/lib/assets/images/background/kai-pilger-space.jpg": {
+    "file": "_app/immutable/assets/kai-pilger-space.da9de3ea.jpg",
+    "src": "src/lib/assets/images/background/kai-pilger-space.jpg"
+  },
+  "src/lib/assets/images/logos/chakra-ui.svg": {
+    "file": "_app/immutable/assets/chakra-ui.d44d871f.svg",
+    "src": "src/lib/assets/images/logos/chakra-ui.svg"
+  },
+  "src/lib/assets/images/logos/csharp.svg": {
+    "file": "_app/immutable/assets/csharp.718af05c.svg",
+    "src": "src/lib/assets/images/logos/csharp.svg"
+  },
+  "src/lib/assets/images/logos/dart.svg": {
+    "file": "_app/immutable/assets/dart.bd089d39.svg",
+    "src": "src/lib/assets/images/logos/dart.svg"
+  },
+  "src/lib/assets/images/logos/firebase.svg": {
+    "file": "_app/immutable/assets/firebase.21cda531.svg",
+    "src": "src/lib/assets/images/logos/firebase.svg"
+  },
+  "src/lib/assets/images/logos/flutter.svg": {
+    "file": "_app/immutable/assets/flutter.074a68fc.svg",
+    "src": "src/lib/assets/images/logos/flutter.svg"
+  },
+  "src/lib/assets/images/logos/formik.svg": {
+    "file": "_app/immutable/assets/formik.106b835e.svg",
+    "src": "src/lib/assets/images/logos/formik.svg"
+  },
+  "src/lib/assets/images/logos/githubMark.svg": {
+    "file": "_app/immutable/assets/githubMark.7a0dd11e.svg",
+    "src": "src/lib/assets/images/logos/githubMark.svg"
+  },
+  "src/lib/assets/images/logos/godot.svg": {
+    "file": "_app/immutable/assets/godot.d87f4cc3.svg",
+    "src": "src/lib/assets/images/logos/godot.svg"
+  },
+  "src/lib/assets/images/logos/googleAdMob.svg": {
+    "file": "_app/immutable/assets/googleAdMob.d468cd80.svg",
+    "src": "src/lib/assets/images/logos/googleAdMob.svg"
+  },
+  "src/lib/assets/images/logos/hiveDB.png": {
+    "file": "_app/immutable/assets/hiveDB.e2c0e2ee.png",
+    "src": "src/lib/assets/images/logos/hiveDB.png"
+  },
+  "src/lib/assets/images/logos/java.svg": {
+    "file": "_app/immutable/assets/java.03ed5f2b.svg",
+    "src": "src/lib/assets/images/logos/java.svg"
+  },
+  "src/lib/assets/images/logos/javascript.svg": {
+    "file": "_app/immutable/assets/javascript.baa03265.svg",
+    "src": "src/lib/assets/images/logos/javascript.svg"
+  },
+  "src/lib/assets/images/logos/next-js.svg": {
+    "file": "_app/immutable/assets/next-js.40f02dfc.svg",
+    "src": "src/lib/assets/images/logos/next-js.svg"
+  },
+  "src/lib/assets/images/logos/python.svg": {
+    "file": "_app/immutable/assets/python.bbc5c606.svg",
+    "src": "src/lib/assets/images/logos/python.svg"
+  },
+  "src/lib/assets/images/logos/react-zustand.png": {
+    "file": "_app/immutable/assets/react-zustand.c8c78b7d.png",
+    "src": "src/lib/assets/images/logos/react-zustand.png"
+  },
+  "src/lib/assets/images/logos/react.svg": {
+    "file": "_app/immutable/assets/react.f2cadfd0.svg",
+    "src": "src/lib/assets/images/logos/react.svg"
+  },
+  "src/lib/assets/images/logos/sql.svg": {
+    "file": "_app/immutable/assets/sql.33b3d862.svg",
+    "src": "src/lib/assets/images/logos/sql.svg"
+  },
+  "src/lib/assets/images/logos/svelte.svg": {
+    "file": "_app/immutable/assets/svelte.dc8a06dc.svg",
+    "src": "src/lib/assets/images/logos/svelte.svg"
+  },
+  "src/lib/assets/images/logos/tailwind.svg": {
+    "file": "_app/immutable/assets/tailwind.7c29d970.svg",
+    "src": "src/lib/assets/images/logos/tailwind.svg"
+  },
+  "src/lib/assets/images/logos/typescript.svg": {
+    "file": "_app/immutable/assets/typescript.336a54a4.svg",
+    "src": "src/lib/assets/images/logos/typescript.svg"
+  },
+  "src/lib/assets/images/myFace.jpg": {
+    "file": "_app/immutable/assets/myFace.5373a17d.jpg",
+    "src": "src/lib/assets/images/myFace.jpg"
+  },
+  "src/lib/assets/images/portfolioImages/chainReactionGame/gameplay.png": {
+    "file": "_app/immutable/assets/gameplay.09caacb1.png",
+    "src": "src/lib/assets/images/portfolioImages/chainReactionGame/gameplay.png"
+  },
+  "src/lib/assets/images/portfolioImages/chainReactionGame/main_menu.png": {
+    "file": "_app/immutable/assets/main_menu.b0b18c75.png",
+    "src": "src/lib/assets/images/portfolioImages/chainReactionGame/main_menu.png"
+  },
+  "src/lib/assets/images/portfolioImages/chainReactionGame/maps.png": {
+    "file": "_app/immutable/assets/maps.17bd97a8.png",
+    "src": "src/lib/assets/images/portfolioImages/chainReactionGame/maps.png"
+  },
+  "src/lib/assets/images/portfolioImages/chainReactionGame/maps_2.png": {
+    "file": "_app/immutable/assets/maps_2.d327e941.png",
+    "src": "src/lib/assets/images/portfolioImages/chainReactionGame/maps_2.png"
+  },
+  "src/lib/assets/images/portfolioImages/chainReactionGame/multiple_players_1.png": {
+    "file": "_app/immutable/assets/multiple_players_1.5ee0312b.png",
+    "src": "src/lib/assets/images/portfolioImages/chainReactionGame/multiple_players_1.png"
+  },
+  "src/lib/assets/images/portfolioImages/chainReactionGame/multiple_players_2.png": {
+    "file": "_app/immutable/assets/multiple_players_2.0a3caca8.png",
+    "src": "src/lib/assets/images/portfolioImages/chainReactionGame/multiple_players_2.png"
+  },
+  "src/lib/assets/images/portfolioImages/chainReactionGame/victory.png": {
+    "file": "_app/immutable/assets/victory.8906a09a.png",
+    "src": "src/lib/assets/images/portfolioImages/chainReactionGame/victory.png"
+  },
+  "src/lib/assets/images/portfolioImages/eCommerceApp/home_page.png": {
+    "file": "_app/immutable/assets/home_page.c7a50fb2.png",
+    "src": "src/lib/assets/images/portfolioImages/eCommerceApp/home_page.png"
+  },
+  "src/lib/assets/images/portfolioImages/eCommerceApp/home_page_2.png": {
+    "file": "_app/immutable/assets/home_page_2.2a163f7a.png",
+    "src": "src/lib/assets/images/portfolioImages/eCommerceApp/home_page_2.png"
+  },
+  "src/lib/assets/images/portfolioImages/eCommerceApp/home_page_dark_mode.png": {
+    "file": "_app/immutable/assets/home_page_dark_mode.7b9b6e3d.png",
+    "src": "src/lib/assets/images/portfolioImages/eCommerceApp/home_page_dark_mode.png"
+  },
+  "src/lib/assets/images/portfolioImages/eCommerceApp/product_page.png": {
+    "file": "_app/immutable/assets/product_page.e8a82512.png",
+    "src": "src/lib/assets/images/portfolioImages/eCommerceApp/product_page.png"
+  },
+  "src/lib/assets/images/portfolioImages/eCommerceApp/shopping_cart.png": {
+    "file": "_app/immutable/assets/shopping_cart.e469dfaf.png",
+    "src": "src/lib/assets/images/portfolioImages/eCommerceApp/shopping_cart.png"
+  },
+  "src/lib/assets/images/portfolioImages/eCommerceApp/wish_list.png": {
+    "file": "_app/immutable/assets/wish_list.253a2c34.png",
+    "src": "src/lib/assets/images/portfolioImages/eCommerceApp/wish_list.png"
+  },
+  "src/lib/assets/images/portfolioImages/morseCodeTorch/home_page.png": {
+    "file": "_app/immutable/assets/home_page.ed323009.png",
+    "src": "src/lib/assets/images/portfolioImages/morseCodeTorch/home_page.png"
+  },
+  "src/lib/assets/images/portfolioImages/morseCodeTorch/morse_code_write.png": {
+    "file": "_app/immutable/assets/morse_code_write.f1969033.png",
+    "src": "src/lib/assets/images/portfolioImages/morseCodeTorch/morse_code_write.png"
+  },
+  "src/lib/assets/images/portfolioImages/morseCodeTorch/save.png": {
+    "file": "_app/immutable/assets/save.a9138f14.png",
+    "src": "src/lib/assets/images/portfolioImages/morseCodeTorch/save.png"
+  },
+  "src/lib/assets/images/portfolioImages/morseCodeTorch/save_history.png": {
+    "file": "_app/immutable/assets/save_history.13f683f4.png",
+    "src": "src/lib/assets/images/portfolioImages/morseCodeTorch/save_history.png"
+  },
+  "src/lib/assets/images/portfolioImages/musicPlayer/add_to_playlist.jpg": {
+    "file": "_app/immutable/assets/add_to_playlist.9c823056.jpg",
+    "src": "src/lib/assets/images/portfolioImages/musicPlayer/add_to_playlist.jpg"
+  },
+  "src/lib/assets/images/portfolioImages/musicPlayer/audio_player.jpg": {
+    "file": "_app/immutable/assets/audio_player.8474e8dc.jpg",
+    "src": "src/lib/assets/images/portfolioImages/musicPlayer/audio_player.jpg"
+  },
+  "src/lib/assets/images/portfolioImages/musicPlayer/playlist_list.jpg": {
+    "file": "_app/immutable/assets/playlist_list.987a7107.jpg",
+    "src": "src/lib/assets/images/portfolioImages/musicPlayer/playlist_list.jpg"
+  },
+  "src/lib/assets/images/portfolioImages/musicPlayer/playlist_page.jpg": {
+    "file": "_app/immutable/assets/playlist_page.f14fd11e.jpg",
+    "src": "src/lib/assets/images/portfolioImages/musicPlayer/playlist_page.jpg"
+  },
+  "src/lib/assets/images/portfolioImages/musicPlayer/search.jpg": {
+    "file": "_app/immutable/assets/search.232d4efd.jpg",
+    "src": "src/lib/assets/images/portfolioImages/musicPlayer/search.jpg"
+  },
+  "src/lib/assets/images/portfolioImages/musicPlayer/search_results.jpg": {
+    "file": "_app/immutable/assets/search_results.67751409.jpg",
+    "src": "src/lib/assets/images/portfolioImages/musicPlayer/search_results.jpg"
+  },
+  "src/lib/assets/images/portfolioImages/musicPlayer/settings.jpg": {
+    "file": "_app/immutable/assets/settings.72d8d8c3.jpg",
+    "src": "src/lib/assets/images/portfolioImages/musicPlayer/settings.jpg"
+  },
+  "src/lib/assets/images/portfolioImages/musicPlayer/song_list_drag.jpg": {
+    "file": "_app/immutable/assets/song_list_drag.0aeb5712.jpg",
+    "src": "src/lib/assets/images/portfolioImages/musicPlayer/song_list_drag.jpg"
+  },
+  "src/lib/assets/images/portfolioImages/musicPlayer/song_more_options.jpg": {
+    "file": "_app/immutable/assets/song_more_options.deaad98b.jpg",
+    "src": "src/lib/assets/images/portfolioImages/musicPlayer/song_more_options.jpg"
+  },
+  "src/lib/assets/images/portfolioImages/toDoApp/createATask.png": {
+    "file": "_app/immutable/assets/createATask.0a5f6c1d.png",
+    "src": "src/lib/assets/images/portfolioImages/toDoApp/createATask.png"
+  },
+  "src/lib/assets/images/portfolioImages/toDoApp/recentlyDeleted.png": {
+    "file": "_app/immutable/assets/recentlyDeleted.55f4c7c3.png",
+    "src": "src/lib/assets/images/portfolioImages/toDoApp/recentlyDeleted.png"
+  },
+  "src/lib/assets/images/portfolioImages/toDoApp/tasks.png": {
+    "file": "_app/immutable/assets/tasks.c266e084.png",
+    "src": "src/lib/assets/images/portfolioImages/toDoApp/tasks.png"
+  },
+  "src/lib/domain/window.ts": {
+    "file": "_app/immutable/chunks/window.22fd754a.js",
+    "isDynamicEntry": true,
+    "src": "src/lib/domain/window.ts"
+  }
+}

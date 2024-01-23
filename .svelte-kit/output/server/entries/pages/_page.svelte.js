@@ -21,7 +21,7 @@ const appShellController = createStore();
 const myFace = "/_app/immutable/assets/myFace.5373a17d.jpg";
 const TitleCard_svelte_svelte_type_style_lang = "";
 const css$4 = {
-  code: '.vignette.svelte-102ric7{pointer-events:none;background:radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0) 15%, rgba(0, 0, 0, 0.05) 35%, rgba(0, 0, 0, 0.1) 65%, rgba(0, 0, 0, 0.45) 100%)}.space-background.svelte-102ric7{background-image:url("../../assets/images/background/kai-pilger-space.jpg") !important}',
+  code: ".vignette.svelte-1y446tc{pointer-events:none;background:radial-gradient(\r\n			circle at 50% 50%,\r\n			rgba(255, 255, 255, 0) 15%,\r\n			rgba(0, 0, 0, 0.05) 35%,\r\n			rgba(0, 0, 0, 0.1) 65%,\r\n			rgba(0, 0, 0, 0.45) 100%\r\n		)}.space-background.svelte-1y446tc{background-image:url('../../assets/images/background/kai-pilger-space.jpg') !important}",
   map: null
 };
 let parallaxSpeed = 1.5;
@@ -34,29 +34,31 @@ const TitleCard = create_ssr_component(($$result, $$props, $$bindings, slots) =>
   if ($$props.scrollY === void 0 && $$bindings.scrollY && scrollY !== void 0)
     $$bindings.scrollY(scrollY);
   $$result.css.add(css$4);
-  return `<div id="title-card" class="h-screen flex items-center justify-center relative z-[0]">${titleCardVisiblity == true ? `<div class="vignette h-screen w-screen fixed z-[2] svelte-102ric7"></div>
-            <div class="space-background h-full w-full flex items-center justify-center relative z-[0] svelte-102ric7"><div class="relative z-[3]"${add_styles({
+  return `<div id="title-card" class="h-screen flex items-center justify-center relative z-[0]">${titleCardVisiblity == true ? `<div class="vignette h-screen w-screen fixed z-[2] svelte-1y446tc"></div>
+		<div class="space-background h-full w-full flex items-center justify-center relative z-[0] svelte-1y446tc"><div class="relative z-[3]"${add_styles({
     "transform": `translate3d(0, ${scrollY * parallaxSpeed}px, 0)`
   })}><div class="h-screen flex items-center justify-center"><div class="grid lg:grid-cols-2 gap-x-8 ga-y-1 place-items-center lg:w-[50rem] w-[19rem]"><div class="flex flex-col lg:gap-y-5 gap-1"><h1 class="h1 font-bold lg:text-left text-center">Loejee Miguel L. Dulaugon
-                                </h1>
-                                <p class="lg:text-[15px] lg:text-left text-center">I am a flexible programmer learner capable of learning and adapating very fast, game development and web development. 
-                                    With tools such as Flutter, Godot Engine and Svelte
-                                </p>
-                                <div class="grid grid-cols-3 gap-1 lg:gap-3"><a href="/downloads/LoejeeMiguel_Dulaugon_Resume.pdf" class="btn variant-filled !bg-primary-500 !text-white text-[13px] lg:text-[16px]" download>My Resume
-                                    </a>
-                                    ${each(jumps, (jump) => {
+							</h1>
+							<p class="lg:text-[15px] lg:text-left text-center">I am a flexible programmer learner capable of learning and adapating very fast, game
+								development and web development. With tools such as Flutter, Godot Engine and Svelte
+							</p>
+							<div class="grid grid-cols-3 gap-1 lg:gap-3"><a href="/downloads/LoejeeMiguel_Dulaugon_Resume.pdf" class="btn variant-filled !bg-primary-500 !text-white text-[13px] lg:text-[16px]" download>My Resume
+								</a>
+								${each(jumps, (jump) => {
     return `<div>${validate_component(JumpButton, "JumpButton").$$render($$result, { jumpTo: jump.id }, {}, {
       default: () => {
         return `${escape(jump.name)}`;
       }
     })}
-                                        </div>`;
+									</div>`;
   })}</div></div>
-                            <img class="object-cover lg:h-96 lg:w-96 h-64 w-64 rounded-full self-center"${add_attribute("src", myFace, 0)} alt="My Face"></div></div></div></div>` : ``}
+						<img class="object-cover lg:h-96 lg:w-96 h-64 w-64 rounded-full self-center"${add_attribute("src", myFace, 0)} alt="My Face"></div></div></div></div>` : ``}
 </div>`;
 });
 const PortfolioViewer = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `${``}`;
+  return `
+<div id="works">${slots.default ? slots.default({}) : ``}</div>
+`;
 });
 const ArrowRight = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let { size = "1em" } = $$props;
@@ -159,7 +161,7 @@ const ArrowDown = create_ssr_component(($$result, $$props, $$bindings, slots) =>
 });
 const PortfolioContent_svelte_svelte_type_style_lang = "";
 const css$3 = {
-  code: ".bio.svelte-1v9ttgl{display:grid;grid-template-rows:auto auto;justify-content:start}",
+  code: ".bio.svelte-1r5xbhf{display:grid;grid-template-rows:auto auto;justify-content:start}",
   map: null
 };
 const PortfolioContent = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -169,16 +171,16 @@ const PortfolioContent = create_ssr_component(($$result, $$props, $$bindings, sl
     $$bindings.imagesDirection(imagesDirection);
   $$result.css.add(css$3);
   return `<div class="flex max-sm:flex-col flex-row lg:min-h-[34rem] justify-center content-center"><button class="btn max-sm:flex hidden">${validate_component(ArrowUp, "ArrowUp").$$render($$result, { size: "2rem" }, {}, {})}</button>
-    <button class="btn max-sm:hidden">${validate_component(ArrowLeft, "ArrowLeft").$$render($$result, { size: "2rem" }, {}, {})}</button>
-    <div class="overflow-hidden"><div class="${"grid " + escape(
+	<button class="btn max-sm:hidden">${validate_component(ArrowLeft, "ArrowLeft").$$render($$result, { size: "2rem" }, {}, {})}</button>
+	<div class="overflow-hidden"><div class="${"grid " + escape(
     imagesDirection == ImagesDirection.TOP ? "" : "lg:grid-cols-2",
     true
   ) + " gap-3 justify-items-center overflow-hidden"}">${imagesDirection == ImagesDirection.RIGHT || isLargeScreen == false || imagesDirection == ImagesDirection.TOP ? `${slots.images ? slots.images({}) : ``}` : ``}
-            <div class="bio gap-2 svelte-1v9ttgl">${slots.bio ? slots.bio({}) : ``}
-                <div class="grid grid-rows-2 gap-3">${slots.actions ? slots.actions({}) : ``}</div></div>
-            ${imagesDirection == ImagesDirection.LEFT && isLargeScreen == true ? `${slots.images ? slots.images({}) : ``}` : ``}</div></div>
-    <button class="btn max-sm:flex hidden">${validate_component(ArrowDown, "ArrowDown").$$render($$result, { size: "2rem" }, {}, {})}</button>
-    <button class="btn max-sm:hidden">${validate_component(ArrowRight, "ArrowRight").$$render($$result, { size: "2rem" }, {}, {})}</button>
+			<div class="bio gap-2 svelte-1r5xbhf">${slots.bio ? slots.bio({}) : ``}
+				<div class="grid grid-rows-2 gap-3">${slots.actions ? slots.actions({}) : ``}</div></div>
+			${imagesDirection == ImagesDirection.LEFT && isLargeScreen == true ? `${slots.images ? slots.images({}) : ``}` : ``}</div></div>
+	<button class="btn max-sm:flex hidden">${validate_component(ArrowDown, "ArrowDown").$$render($$result, { size: "2rem" }, {}, {})}</button>
+	<button class="btn max-sm:hidden">${validate_component(ArrowRight, "ArrowRight").$$render($$result, { size: "2rem" }, {}, {})}</button>
 </div>`;
 });
 class ImageSource {
@@ -201,9 +203,16 @@ const React = "/_app/immutable/assets/react.f2cadfd0.svg";
 const Firebase = "/_app/immutable/assets/firebase.21cda531.svg";
 const Zustand = "/_app/immutable/assets/react-zustand.c8c78b7d.png";
 const Formik = "/_app/immutable/assets/formik.106b835e.svg";
-const TypeScriptIcon = "/_app/immutable/assets/typescript.336a54a4.svg";
+const TypeScript = "/_app/immutable/assets/typescript.336a54a4.svg";
 const ChakraUI = "/_app/immutable/assets/chakra-ui.d44d871f.svg";
 const TailWind = "/_app/immutable/assets/tailwind.7c29d970.svg";
+const Svelte = "/_app/immutable/assets/svelte.dc8a06dc.svg";
+const Next = "/_app/immutable/assets/next-js.40f02dfc.svg";
+const Javascript = "/_app/immutable/assets/javascript.baa03265.svg";
+const Python = "/_app/immutable/assets/python.bbc5c606.svg";
+const SQL = "/_app/immutable/assets/sql.33b3d862.svg";
+const Java = "/_app/immutable/assets/java.03ed5f2b.svg";
+const CSharp = "/_app/immutable/assets/csharp.718af05c.svg";
 const logos = new Map(
   Object.entries({
     Godot: new ImageSource(
@@ -262,7 +271,7 @@ const logos = new Map(
       "Zustand"
     ),
     TypeScript: new ImageSource(
-      TypeScriptIcon,
+      TypeScript,
       "TypeScript Icon",
       "TypeScript"
     ),
@@ -275,6 +284,41 @@ const logos = new Map(
       TailWind,
       "TailWind Icon",
       "TailWind"
+    ),
+    Svelte: new ImageSource(
+      Svelte,
+      "Svelte Icon",
+      "Svelte"
+    ),
+    Next: new ImageSource(
+      Next,
+      "Next Icon",
+      "Next"
+    ),
+    Javascript: new ImageSource(
+      Javascript,
+      "Javascript Icon",
+      "Javascriptt"
+    ),
+    Python: new ImageSource(
+      Python,
+      "Python Icon",
+      "Python"
+    ),
+    Java: new ImageSource(
+      Java,
+      "Java Icon",
+      "Java"
+    ),
+    SQL: new ImageSource(
+      SQL,
+      "SQL Icon",
+      "SQL"
+    ),
+    CSharp: new ImageSource(
+      CSharp,
+      "CSharp Icon",
+      "CSharp"
     )
   })
 );
@@ -615,9 +659,98 @@ const eCommerceAppImages = [
     "Product Page"
   )
 ];
+const SkillsSlot = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  let { skill } = $$props;
+  if ($$props.skill === void 0 && $$bindings.skill && skill !== void 0)
+    $$bindings.skill(skill);
+  return `<div class="flex justify-center items-center bg-white shadow-md p-2 rounded-lg transition-all">${logos.has(skill) ? `<img class="h-24 max-sm:h-16"${add_attribute("alt", logos.get(skill)?.alt, 0)}${add_attribute("src", logos.get(skill)?.src, 0)}>` : ``}</div>`;
+});
+const SkillsTab = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  let { tab } = $$props;
+  let { onClick } = $$props;
+  let { name } = tab;
+  if ($$props.tab === void 0 && $$bindings.tab && tab !== void 0)
+    $$bindings.tab(tab);
+  if ($$props.onClick === void 0 && $$bindings.onClick && onClick !== void 0)
+    $$bindings.onClick(onClick);
+  return `<button class="btn variant-filled">${escape(name)}</button>`;
+});
+const SkillsShowcase = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  let currentTabIndex;
+  let currentTab;
+  function getAllSkills() {
+    const skills = [];
+    tabs.forEach((tab) => {
+      tab.skills.forEach((skill) => {
+        skills.push(skill);
+      });
+    });
+    return { name: "All", skills };
+  }
+  let tabs = [
+    {
+      name: "Frameworks",
+      skills: ["Flutter", "React", "Godot", "Svelte", "Next"]
+    },
+    {
+      name: "Technologies",
+      skills: ["Zustand", "TailWind", "Firebase", "GoogleAdMob", "HiveDB", "GithubMark"]
+    },
+    {
+      name: "Languages",
+      skills: [
+        "Javascript",
+        "TypeScript",
+        "Python",
+        "Dart",
+        "GDScript",
+        "CSharp",
+        "Java",
+        "SQL"
+      ]
+    }
+  ];
+  function getTab(index) {
+    return tabs[index] ?? { name: "", skills: [""] };
+  }
+  currentTabIndex = 0;
+  currentTab = getAllSkills();
+  return `
+
+
+
+<div><div class="flex flex-col gap-3 justify-center items-center p-5"><div class="flex flex-row gap-3 flex-wrap w-fit">${validate_component(SkillsTab, "SkillsTab").$$render(
+    $$result,
+    {
+      tab: getAllSkills(),
+      onClick: () => {
+        currentTab = getAllSkills();
+      }
+    },
+    {},
+    {}
+  )}
+			${each(tabs, (tab) => {
+    return `${validate_component(SkillsTab, "SkillsTab").$$render(
+      $$result,
+      {
+        tab,
+        onClick: () => {
+          currentTabIndex = tabs.indexOf(tab);
+          currentTab = getTab(currentTabIndex);
+        }
+      },
+      {},
+      {}
+    )}`;
+  })}</div>
+		<div class="flex justify-center items-center w-[45%] max-sm:w-[95%]"><div class="grid grid-cols-[repeat(auto-fit,7rem)] max-sm:grid-cols-[repeat(auto-fit,5rem)] w-[100%] p-3 gap-4 bg-slate-900">${each(currentTab.skills, (skill) => {
+    return `${validate_component(SkillsSlot, "SkillsSlot").$$render($$result, { skill }, {}, {})}`;
+  })}</div></div></div></div>`;
+});
 const _page_svelte_svelte_type_style_lang = "";
 const css = {
-  code: ".vignette.svelte-12pvids{pointer-events:none;background:radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0) 59%, rgba(0, 0, 0, 0.05) 75%, rgba(0, 0, 0, 0.1) 86%, rgba(0, 0, 0, 0.45) 100%)}",
+  code: ".vignette.svelte-377ky9{pointer-events:none;background:radial-gradient(\n			circle at 50% 50%,\n			rgba(255, 255, 255, 0) 59%,\n			rgba(0, 0, 0, 0.05) 75%,\n			rgba(0, 0, 0, 0.1) 86%,\n			rgba(0, 0, 0, 0.45) 100%\n		)}",
   map: null
 };
 const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -633,10 +766,12 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   $$unsubscribe_appShellController();
   return `
 
-<div class="vignette fixed w-screen h-screen z-20 svelte-12pvids"></div>
+<div class="vignette fixed w-screen h-screen z-20 svelte-377ky9"></div>
 
 <div>${validate_component(TitleCard, "TitleCard").$$render($$result, { scrollY: $appShellController }, {}, {})}
-	<div class="relative z-10"><div class="min-h-screen py-24 px-[3rem] bg-surface-500 flex items-center justify-center rounded-3xl" id="works-container"><div class="px-[10rem]">${validate_component(PortfolioViewer, "PortfolioViewer").$$render($$result, {}, {}, {
+	<div class="relative z-10"><div class="min-h-screen py-24 px-[1rem] bg-slate-800 rounded-3xl" id="skills-container">${validate_component(SkillsShowcase, "SkillsShowcase").$$render($$result, {}, {}, {})}</div>
+		<div class="h-14"></div>
+		<div class="min-h-screen py-24 px-[3rem] bg-surface-500 flex items-center justify-center rounded-3xl" id="works-container"><div class="px-[10rem]">${validate_component(PortfolioViewer, "PortfolioViewer").$$render($$result, {}, {}, {
     default: () => {
       return `${curPortfolioIndex == PortfolioItems.MOSTLY_STATIC_RESPONSIVE_E_COMMERCE ? `${validate_component(PortfolioContent, "PortfolioContent").$$render($$result, { imagesDirection: ImagesDirection.TOP }, {}, {
         images: () => {
@@ -660,7 +795,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
             {},
             {}
           )}
-							<a href="https://e-commerce-app-flame.vercel.app/" class="btn variant-filled">Visit Website</a></div>`;
+								<a href="https://e-commerce-app-flame.vercel.app/" class="btn variant-filled">Visit Website</a></div>`;
         },
         bio: () => {
           return `<div slot="bio">${validate_component(PortfolioContentBio, "PortfolioContentBio").$$render(
@@ -671,19 +806,20 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
             {},
             {
               body: () => {
-                return `<p slot="body">Created a functional E-Commerce website that looks and functions similar to a real E-Commerce website.. <br>
-									<br>
-									Features: <br>
-									- Add an item to cart (With their amount you want to add). <br>
-									- You can add an item to your wishlist. <br>
-									- You can view your shopping cart. <br> 
-									- State management is stored in the URL so you can share it with your friends!  <br>
-									- You can share the link to that product with your friends! 
-									- Animated banner
-								</p>`;
+                return `<p slot="body">Created a functional E-Commerce website that looks and functions similar to a
+										real E-Commerce website.. <br>
+										<br>
+										Features: <br>
+										- Add an item to cart (With their amount you want to add). <br>
+										- You can add an item to your wishlist. <br>
+										- You can view your shopping cart. <br>
+										- State management is stored in the URL so you can share it with your friends!
+										<br>
+										- You can share the link to that product with your friends! - Animated banner
+									</p>`;
               },
               title: () => {
-                return `<span slot="title">Mostly Static Responsive E-Commerce Website With Functionalities</span>`;
+                return `<span slot="title">Responsive E-Commerce Website With Functionalities</span>`;
               }
             }
           )}</div>`;
@@ -713,9 +849,11 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
               body: () => {
                 return `<p slot="body">I was tired of finding things that are lacking in most music players. <br>
 										<br>
-										So i have decided to make my own! This is a work-in-progress project that aims to have a cloud containing 
-										all your music that you have downloaded shared across various platforms <br> 
-										Not only that, but it will have an option where you can play the music while overlapping with other audios. 
+										So i have decided to make my own! This is a work-in-progress project that aims to
+										have a cloud containing all your music that you have downloaded shared across various
+										platforms <br>
+										Not only that, but it will have an option where you can play the music while overlapping
+										with other audios.
 									</p>`;
               },
               title: () => {
@@ -763,7 +901,8 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
             {},
             {
               body: () => {
-                return `<p slot="body">A fun, useful app that you and your friends can use in order to communicate to each other at night in long distances using your flashlight. <br>
+                return `<p slot="body">A fun, useful app that you and your friends can use in order to communicate to
+										each other at night in long distances using your flashlight. <br>
 										<br>
 										Features: <br>
 										- Save your previous morse codes <br>
@@ -807,10 +946,14 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
             {},
             {
               body: () => {
-                return `<p slot="body">Chain Reaction Atom Revamped Supreme is your classic childhood strategy game re-imagined in a much more colorful/modern settings. This revamp shows much more explosive and expressive graphics and animations. <br>
+                return `<p slot="body">Chain Reaction Atom Revamped Supreme is your classic childhood strategy game
+										re-imagined in a much more colorful/modern settings. This revamp shows much more
+										explosive and expressive graphics and animations. <br>
 										<br>
 										Summary: <br>
-										- Win the game by capturing all the enemy&#39;s atoms / colors by expanding your army of atoms in a strategic way by overloading your atoms. Which will start a chain reaction showing a colorful firework display until it destroys your enemies! <br></p>`;
+										- Win the game by capturing all the enemy&#39;s atoms / colors by expanding your army
+										of atoms in a strategic way by overloading your atoms. Which will start a chain reaction
+										showing a colorful firework display until it destroys your enemies! <br></p>`;
               },
               title: () => {
                 return `<span slot="title">Chain Reaction: Atom Supreme Revamped</span>`;
@@ -858,13 +1001,14 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
             {},
             {
               body: () => {
-                return `<p slot="body">Created a to do app integrated with google&#39;s firebase database, formik, and zustand. <br>
+                return `<p slot="body">Created a to do app integrated with google&#39;s firebase database, formik, and
+										zustand. <br>
 										<br>
 										Features: <br>
 										- Create your own tasks. <br>
 										- Delete tasks and see them on your recently deleted. <br>
-										- Restore your deleted task. <br> 
-										- Tasks persists with google&#39;s online database, firebase. 
+										- Restore your deleted task. <br>
+										- Tasks persists with google&#39;s online database, firebase.
 									</p>`;
               },
               title: () => {
